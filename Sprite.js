@@ -6,8 +6,8 @@ function Sprite() {
   this.SIZE = 15;
 }
 
-Sprite.prototype.desenhar = function(ctx) {
-  ctx.fillStyle = "blue";
+Sprite.prototype.desenhar = function(ctx, cor) {
+  ctx.fillStyle = cor;
   ctx.fillRect(
     this.x - this.SIZE / 2,
     this.y - this.SIZE / 2,
@@ -60,6 +60,6 @@ Sprite.prototype.moverOnMap = function(map, dt) {
 
 Sprite.prototype.persegue = function(alvo) {
   var dist = Math.sqrt(Math.pow(alvo.x - this.x, 2) + Math.pow(alvo.y - this.y, 2));
-this.vx = 40 * (alvo.x - this.x) / dist;
-this.vy = 40 * (alvo.y - this.y) / dist;
+  this.vx = 40 * (alvo.x - this.x) / dist;
+  this.vy = 40 * (alvo.y - this.y) / dist;
 };

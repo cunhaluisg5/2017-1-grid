@@ -2,6 +2,7 @@ function Map(l, c) {
   this.SIZE = 40;
   this.cells = [];
   this.enemies = [];
+  this.tiros = [];
 
   for (var i = 0; i < l; i++) {
     this.cells[i] = [];
@@ -31,7 +32,9 @@ Map.prototype.desenhar = function(ctx) {
       }
     }
   }
-  this.desenharInimigos(ctx);
+  this.desenharInimigos(ctx, 'blue');
+  this.desenharTiros(ctx, 'orange');
+  this.moverTiro(dt);
 };
 
 Map.prototype.loadMap = function(map) {
@@ -69,26 +72,46 @@ Map.prototype.criaInimigo = function (l,c) {
 };
 
 
-Map.prototype.desenharInimigos = function(ctx) {
+Map.prototype.desenharInimigos = function(ctx, cor) {
   for (var i = 0; i < this.enemies.length; i++) {
-    this.enemies[i].desenhar(ctx);
+    this.enemies[i].desenhar(ctx, cor);
   }
-}
+};
+
+Map.prototype.desenharTiros = function(ctx, cor){
+  for(var i = 0; i < this.tiros.length; i++){
+    this.tiros[i].desenhar(ctx, cor);
+  }
+};
 
 Map.prototype.moverInimigos = function(dt) {
   for (var i = 0; i < this.enemies.length; i++) {
     this.enemies[i].mover(dt);
   }
-}
+};
+
+Map.prototype.moverTiro = function(dt){
+  for(var i = 0; i < this.tiros.length; i++){
+    this.tiros[i].mover(dt);
+  }
+};
 
 Map.prototype.moverInimigosOnMap = function(map, dt) {
   for (var i = 0; i < this.enemies.length; i++) {
     this.enemies[i].moverOnMap(map,dt);
   }
-}
+};
 
 Map.prototype.persegue = function(alvo) {
   for (var i = 0; i < this.enemies.length; i++) {
     this.enemies[i].persegue(alvo);
   }
-}
+};
+
+Map.prototype.tiro = function(atirador){
+  var tiro = new Sprite();
+  tiro.x = atirador.x;
+  tiro.y = atirador.y;
+  tiro.vx = 200;
+  this.tiros.push(tiro);
+};

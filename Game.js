@@ -39,8 +39,8 @@ function passo(t){
   mapa.persegue(pc);
   pc.moverOnMap(mapa, dt);
   mapa.moverInimigosOnMap(mapa, dt);
-  mapa.desenhar(ctx);
-  pc.desenhar(ctx);
+  mapa.desenhar(ctx, 'blue');
+  pc.desenhar(ctx, 'black');
   antes = t;
 }
 
@@ -63,7 +63,9 @@ function configuraControles(){
           pc.vy = +100;
           e.preventDefault();
         break;
-      default:
+      case 32:
+        mapa.tiro(pc);
+        break;
     }
   });
   addEventListener("keyup", function(e){
@@ -78,18 +80,6 @@ function configuraControles(){
           pc.vy = 0;
           e.preventDefault();
         break;
-      default:
     }
   });
-
-
-
-
-
-
-
-
-
-
-
 }
