@@ -33,8 +33,7 @@ Map.prototype.desenhar = function(ctx) {
     }
   }
   this.desenharInimigos(ctx, 'blue');
-  this.desenharTiros(ctx, 'orange');
-  this.moverTiro(dt);
+  this.desenharTiros(ctx);
 };
 
 Map.prototype.loadMap = function(map) {
@@ -78,9 +77,9 @@ Map.prototype.desenharInimigos = function(ctx, cor) {
   }
 };
 
-Map.prototype.desenharTiros = function(ctx, cor){
+Map.prototype.desenharTiros = function(ctx){
   for(var i = 0; i < this.tiros.length; i++){
-    this.tiros[i].desenhar(ctx, cor);
+    this.tiros[i].desenhar(ctx);
   }
 };
 
@@ -90,8 +89,14 @@ Map.prototype.moverInimigos = function(dt) {
   }
 };
 
-Map.prototype.moverTiro = function(dt){
+Map.prototype.moverTirosOnMap = function(dt){
   for(var i = 0; i < this.tiros.length; i++){
+    this.tiros[i].moverOnMap(map, dt);
+  }
+};
+
+Map.prototype.moverTiros = function(map, dt) {
+  for (var i = 0; i < this.tiros.length; i++) {
     this.tiros[i].mover(dt);
   }
 };
@@ -108,10 +113,24 @@ Map.prototype.persegue = function(alvo) {
   }
 };
 
-Map.prototype.tiro = function(atirador){
+Map.prototype.tiro = function(x, y, dir){
   var tiro = new Sprite();
-  tiro.x = atirador.x;
-  tiro.y = atirador.y;
-  tiro.vx = 200;
+  tiro.x = x;
+  tiro.y = y;
+  tiro.color = 'orange';
+  switch (dir) {
+    case 1:
+      tiro.vx = -200;
+    break;
+    case 2:
+      tiro.vy = -200;
+    break;
+    case 3:
+      tiro.vx = +200;
+    break;
+    case 4:
+      tiro.vy = +200;
+    break;
+  }
   this.tiros.push(tiro);
 };
