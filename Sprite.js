@@ -4,16 +4,17 @@ function Sprite() {
   this.vx = 0;
   this.vy = 0;
   this.SIZE = 15;
+  this.color = 'black';
 }
 
-Sprite.prototype.desenhar = function(ctx, cor) {
-  ctx.fillStyle = cor;
+Sprite.prototype.desenhar = function(ctx) {
+  ctx.fillStyle = this.color;
   ctx.fillRect(
     this.x - this.SIZE / 2,
     this.y - this.SIZE / 2,
     this.SIZE, this.SIZE
   );
-  ctx.strokeStyle = "darkgrey";
+  ctx.strokeStyle = 'darkgrey';
   ctx.strokeRect(
     this.x - this.SIZE / 2,
     this.y - this.SIZE / 2,
@@ -54,9 +55,7 @@ Sprite.prototype.moverOnMap = function(map, dt) {
   } else {
     this.y = this.y + this.vy * dt;
   }
-
 };
-
 
 Sprite.prototype.persegue = function(alvo) {
   var dist = Math.sqrt(Math.pow(alvo.x - this.x, 2) + Math.pow(alvo.y - this.y, 2));

@@ -9,27 +9,30 @@ function init(){
   tela.width = 600;
   tela.height = 480;
   ctx = tela.getContext('2d');
-  mapa = new Map(12, 15);
-  mapa.loadMap([
+  contador = 1;
+  fases = ([
     [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
-    [1,0,0,0,1,0,0,9,1,0,0,0,0,9,1],
-    [1,0,0,0,1,0,0,0,1,0,0,0,0,0,1],
-    [1,0,0,9,1,0,0,0,0,0,9,0,0,0,1],
-    [1,0,0,0,0,0,0,0,1,0,1,0,0,0,1],
-    [1,0,0,0,0,0,0,1,1,0,1,1,0,0,1],
-    [1,0,0,0,0,1,1,1,1,1,1,1,1,0,1],
-    [1,0,0,0,0,0,9,0,0,0,0,0,9,0,1],
-    [1,1,1,1,0,0,0,0,0,0,0,0,0,0,3],
-    [1,0,0,0,0,1,1,1,1,0,0,0,1,1,1],
-    [1,0,9,0,0,0,0,0,0,0,0,9,1,1,1],
+    [1,0,0,0,0,0,0,0,0,9,0,0,0,0,1],
+    [1,0,0,0,0,0,0,0,0,0,0,0,0,0,1],
+    [1,0,0,0,0,0,0,0,0,0,0,0,0,0,1],
+    [1,0,0,0,0,0,0,0,0,9,0,0,0,9,1],
+    [1,9,0,0,0,0,0,0,0,0,0,0,0,0,1],
+    [1,0,0,0,0,0,0,0,0,0,0,0,0,0,1],
+    [1,0,0,0,0,9,0,0,0,0,0,0,1,1,1],
+    [1,9,0,0,0,0,0,0,0,0,0,0,0,9,3],
+    [1,0,1,1,0,0,0,0,0,0,0,0,1,1,1],
+    [1,0,9,0,0,0,0,0,0,0,0,0,0,0,1],
     [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]
   ]);
+  mapa = new Map(12, 15);
+  mapa.loadMap(fases);
   pc = new Sprite();
   pc.x = 50;
   pc.y = 50;
   pc.dir = 3;
+  pc.color = "blue";
   configuraControles();
-
+console.log("Fase: " + contador);
   requestAnimationFrame(passo);
 }
 
@@ -43,9 +46,10 @@ function passo(t){
   pc.moverOnMap(mapa, dt);
   mapa.moverInimigosOnMap(mapa, dt);
   mapa.moverTiros(mapa, dt);
-  mapa.desenhar(ctx, 'blue');
+  mapa.desenhar(ctx);
+  pc.desenhar(ctx);
   mapa.testarFim(mapa);
-  pc.desenhar(ctx, 'black');
+  mapa.acabou(ctx, pc);
   antes = t;
 }
 
@@ -78,6 +82,7 @@ function configuraControles(){
         break;
     }
   });
+  
   addEventListener("keyup", function(e){
     switch (e.keyCode) {
       case 37:
