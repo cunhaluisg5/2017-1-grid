@@ -26,13 +26,24 @@ Map.prototype.desenhar = function(ctx) {
           ctx.lineWidth = 3;
           ctx.strokeRect(j * this.SIZE, i * this.SIZE, this.SIZE, this.SIZE);
           break;
-        default:
-          ctx.fillStyle = 'red';
+        case 3:
+          ctx.fillStyle = 'green';
+          ctx.strokeStyle = 'chocolate';
           ctx.fillRect(j * this.SIZE, i * this.SIZE, this.SIZE, this.SIZE);
+          ctx.lineWidth = 3;
+          ctx.strokeRect(j * this.SIZE, i * this.SIZE, this.SIZE, this.SIZE);
+          break;
+        default:
+          ctx.fillStyle = 'green';
+          ctx.strokeStyle = 'darkgreen';
+          ctx.fillRect(j * this.SIZE, i * this.SIZE, this.SIZE, this.SIZE);
+          ctx.lineWidth = 3;
+          ctx.strokeRect(j * this.SIZE, i * this.SIZE, this.SIZE, this.SIZE);
       }
     }
   }
-  this.desenharInimigos(ctx, 'blue');
+
+  this.desenharInimigos(ctx);
   this.desenharTiros(ctx);
 };
 
@@ -42,14 +53,13 @@ Map.prototype.loadMap = function(map) {
       switch (map[i][j]) {
         case 0:
         case 1:
+        case 3:
           this.cells[i][j] = map[i][j];
           break;
         case 9:
           this.cells[i][j] = 0;
           this.criaInimigo(i,j);
         break;
-        default:
-
       }
     }
   }
@@ -185,3 +195,18 @@ Map.prototype.quantidadeInimigos = function(){
     console.log("Não existem mais inimigos");
   }
 };
+
+Map.prototype.testarFim = function(map){
+  if(this.enemies.length == 0){
+    for (var i = 0; i < this.cells.length; i++) {
+      var linha = this.cells[i];
+      for (var j = 0; j < linha.length; j++) {
+        switch (this.cells[i][j]) {
+          case 3:
+            this.cells[i][j] = 0;
+            break;
+        }
+      }
+    }
+  }
+}
