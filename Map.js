@@ -206,7 +206,16 @@ Map.prototype.testarFim = function(map){
             this.cells[i][j] = 0;
             break;
         }
+      this.desenhaChave(ctx);
       }
     }
   }
 }
+
+Map.prototype.desenhaChave = function(ctx){
+  var chave = new Sprite();
+  chave.x = 580;
+  chave.y = 340;
+  chave.color = 'yellow';
+  chave.desenhar(ctx);
+};
