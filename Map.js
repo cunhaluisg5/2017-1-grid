@@ -151,6 +151,7 @@ Map.prototype.testarColisaoTiros = function(map){
         this.tiros[j].destroyed = true;
         this.enemies[i].destroyed = true;
         this.remove();
+        this.quantidadeInimigos();
       }
     }
   }
@@ -172,5 +173,15 @@ Map.prototype.remove = function(){
     if (this.enemies[i].destroyed == true){
       this.enemies.splice(i,1);
     }
+  }
+};
+
+Map.prototype.quantidadeInimigos = function(){
+  if(this.enemies.length > 1){
+    console.log("Faltam " + this.enemies.length + " inimigos");
+  }else if(this.enemies.length == 1){
+    console.log("Falta " + this.enemies.length + " inimigo");
+  }else if(this.enemies.length < 1){
+    console.log("Não existem mais inimigos");
   }
 };
