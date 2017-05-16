@@ -157,7 +157,7 @@ Map.prototype.testarColisao = function(alvo){
 
 Map.prototype.testarColisaoTiros = function(map){
   for (var i = 0; i < this.enemies.length; i++) {
-    for (var j = this.tiros.length-1; j>=0; j--) {
+    for (var j = this.tiros.length - 1; j >= 0; j--) {
       if(this.tiros[j].colidiuCom(this.enemies[i])){
         this.tiros[j].destroyed = true;
         this.enemies[i].destroyed = true;
@@ -166,8 +166,8 @@ Map.prototype.testarColisaoTiros = function(map){
       }
     }
   }
-  for (var j =  this.tiros.length-1;j>=0; j--) {
-    if (map.cells[Math.floor(this.tiros[j].y/40)][Math.floor(this.tiros[j].x/40)] == 1){
+  for (var j =  this.tiros.length - 1;j >= 0; j--) {
+    if (map.cells[Math.floor(this.tiros[j].y / 40)][Math.floor(this.tiros[j].x / 40)] == 1){
       this.tiros[j].destroyed = true;
       this.remove();
     }
@@ -175,12 +175,12 @@ Map.prototype.testarColisaoTiros = function(map){
 };
 
 Map.prototype.remove = function(){
-  for (var j = this.tiros.length-1; j>=0; j--) {
+  for (var j = this.tiros.length - 1; j >= 0; j--) {
     if (this.tiros[j].destroyed == true){
       this.tiros.splice(j,1);
     }
   }
-  for (var i = this.enemies.length-1; i>=0; i--) {
+  for (var i = this.enemies.length - 1; i >= 0; i--) {
     if (this.enemies[i].destroyed == true){
       this.enemies.splice(i,1);
     }
@@ -410,13 +410,13 @@ Map.prototype.acabou = function(ctx, pc){
     ctx.strokeStyle = "black";
     ctx.font = "3em fantasy";
     var texto = "Parabéns!";
-    ctx.fillText(texto, 180, 200);
-    ctx.strokeText(texto, 180, 200); 
+    ctx.fillText(texto, 200, 200);
+    ctx.strokeText(texto, 200, 200); 
     var texto = "Você Venceu!";
     ctx.fillText(texto, 150, 300);
     ctx.strokeText(texto, 150, 300);
   }
-}
+};
 
 Map.prototype.verificaPerdeu = function(alvo){
   if(alvo.vidas == 0){

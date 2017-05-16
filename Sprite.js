@@ -70,7 +70,7 @@ Sprite.prototype.colidiuCom = function(alvo){
   if(this.x + (this.SIZE / 2) < alvo.x - (alvo.SIZE / 2)) return false;
   if(this.x - (this.SIZE / 2) > alvo.x + (alvo.SIZE / 2)) return false;
   return true;
-}
+};
 
 Sprite.prototype.desenhaVidas = function(){
   if(contador < 11 && this.vidas < 4){
@@ -79,7 +79,7 @@ Sprite.prototype.desenhaVidas = function(){
     ctx.font = "1em Arial Black";
     ctx.fillText("Vidas: " + this.vidas, 10, 20);
   }
-}
+};
 
 Sprite.prototype.desenhaNivel = function(){
   if(contador < 11 && this.vidas < 4){

@@ -38,7 +38,7 @@ function init(){
 }
 
 function passo(t){
-  dt = (t - antes) / 1000;
+  dt = (t - antes)/1000;
   ctx.clearRect(0,0, tela.width, tela.height);
   id = requestAnimationFrame(passo);
   pc.desenhaVidas();
