@@ -108,6 +108,7 @@ Map.prototype.tiro = function(x, y, dir){
   var tiro = new Sprite();
   tiro.x = x;
   tiro.y = y;
+  tiro.SIZE = 10;
   tiro.color = 'orange';
   switch (dir) {
     case 1:
