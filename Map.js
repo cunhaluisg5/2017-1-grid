@@ -148,7 +148,7 @@ Map.prototype.testarColisao = function(alvo){
   for (var i = 0; i < this.enemies.length; i++) {
     if(alvo.colidiuCom(this.enemies[i])){
       alvo.x = 50;
-      alvo.y = 50;
+      alvo.y = 90;
     }
   }
 };
@@ -214,6 +214,7 @@ Map.prototype.testarFim = function(map){
     contador = contador + 1;
     if (contador == 1){
       fases=([
+        [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
         [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
         [1,0,0,0,0,0,0,0,0,9,0,0,0,0,1],
         [1,0,0,0,0,0,0,0,0,0,0,0,0,0,1],
@@ -229,6 +230,7 @@ Map.prototype.testarFim = function(map){
       ])
     } else if (contador == 2){
       fases=([
+        [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
         [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
         [1,0,0,0,0,0,0,0,0,9,0,0,1,1,1],
         [1,0,0,0,0,0,0,0,0,0,0,0,1,0,1],
@@ -244,6 +246,7 @@ Map.prototype.testarFim = function(map){
       ])
     } else if (contador == 3){
       fases=([
+        [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
         [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
         [1,0,1,1,9,0,0,0,0,9,0,0,1,1,1],
         [1,0,0,1,0,0,0,0,0,0,0,0,1,0,1],
@@ -259,6 +262,7 @@ Map.prototype.testarFim = function(map){
       ])
     } else if (contador == 4){
       fases=([
+        [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
         [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
         [1,0,1,1,9,0,0,0,0,1,0,0,1,1,1],
         [1,0,0,1,0,0,0,9,1,1,0,0,1,0,1],
@@ -274,6 +278,7 @@ Map.prototype.testarFim = function(map){
       ])
     } else if (contador == 5){
       fases=([
+        [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
         [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
         [1,0,1,1,9,0,0,0,0,1,0,0,1,1,1],
         [1,0,0,1,0,0,0,9,1,1,0,0,1,0,1],
@@ -289,6 +294,7 @@ Map.prototype.testarFim = function(map){
       ])
     } else if (contador == 6){
       fases=([
+        [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
         [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
         [1,0,1,1,9,0,0,0,0,1,0,0,1,1,1],
         [1,0,0,1,0,0,0,0,1,1,0,0,1,0,1],
@@ -304,6 +310,7 @@ Map.prototype.testarFim = function(map){
       ])
     } else if (contador == 7){
       fases=([
+        [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
         [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
         [1,0,1,1,0,0,0,0,0,1,0,0,1,1,1],
         [1,0,0,1,0,0,0,0,1,1,0,0,1,0,1],
@@ -319,6 +326,7 @@ Map.prototype.testarFim = function(map){
       ])
     } else if (contador == 8){
       fases=([
+        [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
         [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
         [1,0,1,1,0,0,0,0,0,1,0,0,1,1,1],
         [1,0,0,1,0,0,0,0,1,1,0,0,1,0,1],
@@ -334,6 +342,7 @@ Map.prototype.testarFim = function(map){
       ])
     } else if (contador == 9){
       fases=([
+        [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
         [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
         [1,0,1,1,0,1,9,0,0,1,0,0,1,1,1],
         [1,0,0,1,0,0,0,0,1,1,0,0,1,9,1],
@@ -349,6 +358,7 @@ Map.prototype.testarFim = function(map){
       ])
     } else if (contador == 10){
       fases=([
+        [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
         [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
         [1,0,1,1,1,0,9,0,0,1,0,0,0,0,1],
         [1,0,0,0,0,0,1,0,1,1,0,0,1,9,1],
@@ -368,7 +378,7 @@ Map.prototype.testarFim = function(map){
       this.remove();
     }
     pc.x = 50;
-    pc.y = 50;
+    pc.y = 90;
     mapa.loadMap(fases);
     if(contador < 11){
       console.log("Fase: " + contador);
@@ -379,7 +389,7 @@ Map.prototype.testarFim = function(map){
 Map.prototype.desenhaChave = function(ctx){
   var chave = new Sprite();
   chave.x = 580;
-  chave.y = 340;
+  chave.y = 380;
   chave.color = 'yellow';
   chave.desenhar(ctx);
 };

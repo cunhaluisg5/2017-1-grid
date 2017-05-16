@@ -7,10 +7,11 @@ var pc;
 function init(){
   tela = document.getElementsByTagName('canvas')[0];
   tela.width = 600;
-  tela.height = 480;
+  tela.height = 520;
   ctx = tela.getContext('2d');
   contador = 1;
   fases = ([
+    [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
     [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
     [1,0,0,0,0,0,0,0,0,9,0,0,0,0,1],
     [1,0,0,0,0,0,0,0,0,0,0,0,0,0,1],
@@ -24,11 +25,11 @@ function init(){
     [1,0,9,0,0,0,0,0,0,0,0,0,0,0,1],
     [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]
   ]);
-  mapa = new Map(12, 15);
+  mapa = new Map(13, 15);
   mapa.loadMap(fases);
   pc = new Sprite();
   pc.x = 50;
-  pc.y = 50;
+  pc.y = 90;
   pc.dir = 3;
   pc.color = "blue";
   configuraControles();
