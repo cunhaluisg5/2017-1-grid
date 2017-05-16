@@ -67,8 +67,8 @@ Map.prototype.loadMap = function(map) {
 
 Map.prototype.getIndices = function (sprite) {
    var pos = {};
-   pos.c = Math.floor(sprite.x/this.SIZE);
-   pos.l = Math.floor(sprite.y/this.SIZE);
+   pos.c = Math.floor(sprite.x / this.SIZE);
+   pos.l = Math.floor(sprite.y / this.SIZE);
    return pos;
 };
 
@@ -413,8 +413,8 @@ Map.prototype.acabou = function(ctx, pc){
     ctx.fillText(texto, 200, 200);
     ctx.strokeText(texto, 200, 200); 
     var texto = "Você Venceu!";
-    ctx.fillText(texto, 150, 300);
-    ctx.strokeText(texto, 150, 300);
+    ctx.fillText(texto, 170, 300);
+    ctx.strokeText(texto, 170, 300);
   }
 };
 
