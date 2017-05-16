@@ -42,6 +42,7 @@ function passo(t){
   ctx.clearRect(0,0, tela.width, tela.height);
   requestAnimationFrame(passo);
   pc.desenhaVidas();
+  pc.desenhaNivel();
   mapa.persegue(pc);
   mapa.testarColisao(pc);
   mapa.testarColisaoTiros(mapa);

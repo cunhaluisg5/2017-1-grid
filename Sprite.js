@@ -80,3 +80,12 @@ Sprite.prototype.desenhaVidas = function(){
     ctx.fillText("Vidas: " + this.vidas, 10, 20);
   }
 }
+
+Sprite.prototype.desenhaNivel = function(){
+  if(contador < 11 && this.vidas < 4){
+    ctx.fillStyle = 'brown';
+    ctx.strokeStyle = 'yellow';
+    ctx.font = "1em Arial Black";
+    ctx.fillText("Nível: " + contador, 520, 20);
+  }
+}
