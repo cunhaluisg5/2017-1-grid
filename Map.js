@@ -417,3 +417,26 @@ Map.prototype.acabou = function(ctx, pc){
     ctx.strokeText(texto, 150, 300);
   }
 }
+
+Map.prototype.verificaPerdeu = function(alvo){
+  if(alvo.vidas == 0){
+    for (var i = 0; i < this.cells.length; i++) {
+      var linha = this.cells[i];
+      for (var j = 0; j < linha.length; j++) {
+        ctx.clearRect(j * this.SIZE, i * this.SIZE, this.SIZE, this.SIZE);
+      }
+    }
+    cancelAnimationFrame(id);
+    tela.style.border = "thick solid #843232";
+    tela.style.backgroundColor = "#d2c41d";
+    ctx.fillStyle = "#843232";
+    ctx.strokeStyle = "black";
+    ctx.font = "3em fantasy";
+    var texto = "Que pena!";
+    ctx.fillText(texto, 200, 200);
+    ctx.strokeText(texto, 200, 200); 
+    var texto = "Você Perdeu!";
+    ctx.fillText(texto, 170, 300);
+    ctx.strokeText(texto, 170, 300);
+  }
+}

@@ -33,14 +33,14 @@ function init(){
   pc.dir = 3;
   pc.color = "blue";
   configuraControles();
-console.log("Fase: " + contador);
-  requestAnimationFrame(passo);
+  console.log("Fase: " + contador);
+  var id = requestAnimationFrame(passo);
 }
 
 function passo(t){
   dt = (t - antes) / 1000;
   ctx.clearRect(0,0, tela.width, tela.height);
-  requestAnimationFrame(passo);
+  id = requestAnimationFrame(passo);
   pc.desenhaVidas();
   pc.desenhaNivel();
   mapa.persegue(pc);
@@ -53,6 +53,7 @@ function passo(t){
   pc.desenhar(ctx);
   mapa.testarFim(mapa);
   mapa.acabou(ctx, pc);
+  mapa.verificaPerdeu(pc);
   antes = t;
 }
 
