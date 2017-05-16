@@ -150,6 +150,7 @@ Map.prototype.testarColisao = function(alvo){
     if(alvo.colidiuCom(this.enemies[i])){
       alvo.x = 50;
       alvo.y = 90;
+      alvo.vidas--;
     }
   }
 };

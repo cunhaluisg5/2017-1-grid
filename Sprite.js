@@ -5,6 +5,7 @@ function Sprite() {
   this.vy = 0;
   this.SIZE = 15;
   this.color = 'black';
+  this.vidas = 3;
 }
 
 Sprite.prototype.desenhar = function(ctx) {
@@ -69,4 +70,13 @@ Sprite.prototype.colidiuCom = function(alvo){
   if(this.x + (this.SIZE / 2) < alvo.x - (alvo.SIZE / 2)) return false;
   if(this.x - (this.SIZE / 2) > alvo.x + (alvo.SIZE / 2)) return false;
   return true;
+}
+
+Sprite.prototype.desenhaVidas = function(){
+  if(contador < 11 && this.vidas < 4){
+    ctx.fillStyle = 'brown';
+    ctx.strokeStyle = 'yellow';
+    ctx.font = "1em Arial Black";
+    ctx.fillText("Vidas: " + this.vidas, 10, 20);
+  }
 }

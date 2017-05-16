@@ -38,9 +38,10 @@ console.log("Fase: " + contador);
 }
 
 function passo(t){
-  dt = (t - antes)/1000;
+  dt = (t - antes) / 1000;
   ctx.clearRect(0,0, tela.width, tela.height);
   requestAnimationFrame(passo);
+  pc.desenhaVidas();
   mapa.persegue(pc);
   mapa.testarColisao(pc);
   mapa.testarColisaoTiros(mapa);
