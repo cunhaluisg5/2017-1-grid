@@ -33,7 +33,6 @@ function init(){
   pc.dir = 3;
   pc.color = "blue";
   configuraControles();
-  console.log("Fase: " + contador);
   var id = requestAnimationFrame(passo);
 }
 

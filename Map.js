@@ -161,17 +161,17 @@ Map.prototype.testarColisaoTiros = function(map){
       if(this.tiros[j].colidiuCom(this.enemies[i])){
         this.tiros[j].destroyed = true;
         this.enemies[i].destroyed = true;
-        this.remove();
-        this.quantidadeInimigos();
+        break;
       }
     }
   }
   for (var j =  this.tiros.length - 1;j >= 0; j--) {
     if (map.cells[Math.floor(this.tiros[j].y / 40)][Math.floor(this.tiros[j].x / 40)] == 1){
       this.tiros[j].destroyed = true;
-      this.remove();
+      break;
     }
   }
+  this.remove();
 };
 
 Map.prototype.remove = function(){
@@ -184,16 +184,6 @@ Map.prototype.remove = function(){
     if (this.enemies[i].destroyed == true){
       this.enemies.splice(i,1);
     }
-  }
-};
-
-Map.prototype.quantidadeInimigos = function(){
-  if(this.enemies.length > 1){
-    console.log("Faltam " + this.enemies.length + " inimigos");
-  }else if(this.enemies.length == 1){
-    console.log("Falta " + this.enemies.length + " inimigo");
-  }else if(this.enemies.length < 1){
-    console.log("Não existem mais inimigos");
   }
 };
 
@@ -212,7 +202,6 @@ Map.prototype.testarFim = function(map){
     }
   }
   if(pc.x > 580 && pc.x < 595){
-    console.clear();
     contador = contador + 1;
     if (contador == 1){
       fases=([
@@ -382,9 +371,6 @@ Map.prototype.testarFim = function(map){
     pc.x = 50;
     pc.y = 90;
     mapa.loadMap(fases);
-    if(contador < 11){
-      console.log("Fase: " + contador);
-    }
   }
 };
 
