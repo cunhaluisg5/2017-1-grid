@@ -1,7 +1,8 @@
 function Map(l, c) {
-  this.SIZE = 40;
+  this.SIZE = 32;
   this.cells = [];
   this.enemies = [];
+  this.imageLib = null;
   this.tiros = [];
 
   for (var i = 0; i < l; i++) {
@@ -11,8 +12,12 @@ function Map(l, c) {
     }
   }
 }
+Map.prototype.desenhar = function(ctx){
+  //this.desenharLimites(ctx);
+  this.desenharTiles(ctx);
+}
 
-Map.prototype.desenhar = function(ctx) {
+Map.prototype.desenharLimites = function(ctx) {
   for (var i = 0; i < this.cells.length; i++) {
     var linha = this.cells[i];
     for (var j = 0; j < linha.length; j++) {
@@ -26,25 +31,31 @@ Map.prototype.desenhar = function(ctx) {
           ctx.lineWidth = 3;
           ctx.strokeRect(j * this.SIZE, i * this.SIZE, this.SIZE, this.SIZE);
           break;
-        case 3:
-          ctx.fillStyle = 'green';
-          ctx.strokeStyle = 'chocolate';
-          ctx.fillRect(j * this.SIZE, i * this.SIZE, this.SIZE, this.SIZE);
-          ctx.lineWidth = 3;
-          ctx.strokeRect(j * this.SIZE, i * this.SIZE, this.SIZE, this.SIZE);
-          break;
         default:
-          ctx.fillStyle = 'green';
-          ctx.strokeStyle = 'darkgreen';
-          ctx.fillRect(j * this.SIZE, i * this.SIZE, this.SIZE, this.SIZE);
-          ctx.lineWidth = 3;
-          ctx.strokeRect(j * this.SIZE, i * this.SIZE, this.SIZE, this.SIZE);
       }
     }
   }
-
   this.desenharInimigos(ctx);
-  this.desenharTiros(ctx);
+};
+Map.prototype.desenharTiles = function(ctx) {
+  for (var i = 0; i < this.cells.length; i++) {
+    var linha = this.cells[i];
+    for (var j = 0; j < linha.length; j++) {
+      switch (this.cells[i][j]) {
+        case 0:
+          this.imageLib.drawImageTile(ctx, "floor", 3, 1, 32, j * this.SIZE, i * this.SIZE);
+          break;
+        case 1:
+          this.imageLib.drawImageTile(ctx, "floor", 3, 1, 32, j * this.SIZE, i * this.SIZE);
+          this.imageLib.drawImageTile(ctx, "mountain", 7, 10, 32, j * this.SIZE, i * this.SIZE);
+          break;
+        case 5:
+          break;
+        default:
+      }
+    }
+  }
+  this.desenharInimigos(ctx);
 };
 
 Map.prototype.loadMap = function(map) {
@@ -53,13 +64,15 @@ Map.prototype.loadMap = function(map) {
       switch (map[i][j]) {
         case 0:
         case 1:
-        case 3:
+        case 5:
           this.cells[i][j] = map[i][j];
           break;
         case 9:
           this.cells[i][j] = 0;
           this.criaInimigo(i,j);
         break;
+        default:
+
       }
     }
   }
@@ -72,55 +85,61 @@ Map.prototype.getIndices = function (sprite) {
    return pos;
 };
 
+
 Map.prototype.criaInimigo = function (l,c) {
   var inimigo = new Sprite();
+  inimigo.imageLib = this.imageLib;
   inimigo.x = (c + 0.5) * this.SIZE;
   inimigo.y = (l + 0.5) * this.SIZE;
-  inimigo.color = 'red';
   this.enemies.push(inimigo);
 };
+
 
 Map.prototype.desenharInimigos = function(ctx) {
   for (var i = 0; i < this.enemies.length; i++) {
     this.enemies[i].desenhar(ctx);
   }
-};
+}
 
 Map.prototype.moverInimigos = function(dt) {
   for (var i = 0; i < this.enemies.length; i++) {
     this.enemies[i].mover(dt);
   }
-};
+}
 
 Map.prototype.moverInimigosOnMap = function(map, dt) {
   for (var i = 0; i < this.enemies.length; i++) {
     this.enemies[i].moverOnMap(map,dt);
   }
-};
+}
 
 Map.prototype.persegue = function(alvo) {
   for (var i = 0; i < this.enemies.length; i++) {
     this.enemies[i].persegue(alvo);
   }
-};
+}
 
 Map.prototype.tiro = function(x, y, dir){
   var tiro = new Sprite();
   tiro.x = x;
   tiro.y = y;
-  tiro.SIZE = 10;
+  tiro.SIZE = 5;
   tiro.color = 'orange';
   switch (dir) {
     case 1:
+      pc.pose = 10;
       tiro.vx = -200;
     break;
     case 2:
+      pc.pose = 11;
       tiro.vy = -200;
     break;
     case 3:
+      pc.pose = 8;
       tiro.vx = +200;
     break;
     case 4:
+      pc.pose = 9;
       tiro.vy = +200;
     break;
   }
@@ -129,7 +148,7 @@ Map.prototype.tiro = function(x, y, dir){
 
 Map.prototype.desenharTiros = function(ctx){
   for(var i = 0; i < this.tiros.length; i++){
-    this.tiros[i].desenhar(ctx);
+    this.tiros[i].desenharLimites(ctx);
   }
 };
 
@@ -165,8 +184,8 @@ Map.prototype.testarColisaoTiros = function(map){
       }
     }
   }
-  for (var j =  this.tiros.length - 1;j >= 0; j--) {
-    if (map.cells[Math.floor(this.tiros[j].y / 40)][Math.floor(this.tiros[j].x / 40)] == 1){
+  for (var j =  this.tiros.length - 1; j >= 0; j--) {
+    if (map.cells[Math.floor(this.tiros[j].y / 32)][Math.floor(this.tiros[j].x / 32)] == 1){
       this.tiros[j].destroyed = true;
       break;
     }
@@ -192,28 +211,23 @@ Map.prototype.testarFim = function(map){
     for (var i = 0; i < this.cells.length; i++) {
       var linha = this.cells[i];
       for (var j = 0; j < linha.length; j++) {
-        switch (this.cells[i][j]) {
-          case 3:
-            this.cells[i][j] = 0;
-            break;
-        }
-      this.desenhaChave(ctx);
+        this.desenhaChave(ctx);
       }
     }
   }
-  if(pc.x > 580 && pc.x < 595){
+  if(pc.x > 465 && pc.x < 480 && this.enemies.length == 0){
     contador = contador + 1;
     if (contador == 1){
       fases=([
-        [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+        [5,5,5,5,5,5,5,5,5,5,5,5,5,5,5],
         [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
-        [1,0,0,0,0,0,0,0,0,9,0,0,0,0,1],
-        [1,0,0,0,0,0,0,0,0,0,0,0,0,0,1],
+        [1,0,0,0,0,0,0,0,0,9,0,0,1,1,1],
+        [1,0,0,0,0,0,0,0,0,0,0,0,1,0,1],
         [1,0,0,0,0,0,0,0,0,0,0,0,0,0,1],
         [1,0,0,0,0,0,0,0,0,9,0,0,0,9,1],
-        [1,9,0,0,0,0,0,0,0,0,0,0,0,0,1],
         [1,0,0,0,0,0,0,0,0,0,0,0,0,0,1],
-        [1,0,0,0,0,9,0,0,0,0,0,0,1,1,1],
+        [1,0,0,0,0,0,0,0,0,9,0,1,0,0,1],
+        [1,0,0,0,0,9,0,0,0,0,0,1,1,1,1],
         [1,9,0,0,0,0,0,0,0,0,0,0,0,9,3],
         [1,0,1,1,0,0,0,0,0,0,0,0,1,1,1],
         [1,0,9,0,0,0,0,0,0,0,0,0,0,0,1],
@@ -221,7 +235,7 @@ Map.prototype.testarFim = function(map){
       ])
     } else if (contador == 2){
       fases=([
-        [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+        [5,5,5,5,5,5,5,5,5,5,5,5,5,5,5],
         [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
         [1,0,0,0,0,0,0,0,0,9,0,0,1,1,1],
         [1,0,0,0,0,0,0,0,0,0,0,0,1,0,1],
@@ -237,7 +251,7 @@ Map.prototype.testarFim = function(map){
       ])
     } else if (contador == 3){
       fases=([
-        [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+        [5,5,5,5,5,5,5,5,5,5,5,5,5,5,5],
         [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
         [1,0,1,1,9,0,0,0,0,9,0,0,1,1,1],
         [1,0,0,1,0,0,0,0,0,0,0,0,1,0,1],
@@ -253,7 +267,7 @@ Map.prototype.testarFim = function(map){
       ])
     } else if (contador == 4){
       fases=([
-        [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+        [5,5,5,5,5,5,5,5,5,5,5,5,5,5,5],
         [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
         [1,0,1,1,9,0,0,0,0,1,0,0,1,1,1],
         [1,0,0,1,0,0,0,9,1,1,0,0,1,0,1],
@@ -269,7 +283,7 @@ Map.prototype.testarFim = function(map){
       ])
     } else if (contador == 5){
       fases=([
-        [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+        [5,5,5,5,5,5,5,5,5,5,5,5,5,5,5],
         [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
         [1,0,1,1,9,0,0,0,0,1,0,0,1,1,1],
         [1,0,0,1,0,0,0,9,1,1,0,0,1,0,1],
@@ -285,7 +299,7 @@ Map.prototype.testarFim = function(map){
       ])
     } else if (contador == 6){
       fases=([
-        [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+        [5,5,5,5,5,5,5,5,5,5,5,5,5,5,5],
         [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
         [1,0,1,1,9,0,0,0,0,1,0,0,1,1,1],
         [1,0,0,1,0,0,0,0,1,1,0,0,1,0,1],
@@ -301,7 +315,7 @@ Map.prototype.testarFim = function(map){
       ])
     } else if (contador == 7){
       fases=([
-        [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+        [5,5,5,5,5,5,5,5,5,5,5,5,5,5,5],
         [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
         [1,0,1,1,0,0,0,0,0,1,0,0,1,1,1],
         [1,0,0,1,0,0,0,0,1,1,0,0,1,0,1],
@@ -317,7 +331,7 @@ Map.prototype.testarFim = function(map){
       ])
     } else if (contador == 8){
       fases=([
-        [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+        [5,5,5,5,5,5,5,5,5,5,5,5,5,5,5],
         [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
         [1,0,1,1,0,0,0,0,0,1,0,0,1,1,1],
         [1,0,0,1,0,0,0,0,1,1,0,0,1,0,1],
@@ -333,7 +347,7 @@ Map.prototype.testarFim = function(map){
       ])
     } else if (contador == 9){
       fases=([
-        [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+        [5,5,5,5,5,5,5,5,5,5,5,5,5,5,5],
         [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
         [1,0,1,1,0,1,9,0,0,1,0,0,1,1,1],
         [1,0,0,1,0,0,0,0,1,1,0,0,1,9,1],
@@ -349,7 +363,7 @@ Map.prototype.testarFim = function(map){
       ])
     } else if (contador == 10){
       fases=([
-        [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+        [5,5,5,5,5,5,5,5,5,5,5,5,5,5,5],
         [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
         [1,0,1,1,1,0,9,0,0,1,0,0,0,0,1],
         [1,0,0,0,0,0,1,0,1,1,0,0,1,9,1],
@@ -376,10 +390,10 @@ Map.prototype.testarFim = function(map){
 
 Map.prototype.desenhaChave = function(ctx){
   var chave = new Sprite();
-  chave.x = 580;
-  chave.y = 380;
+  chave.x = 465;
+  chave.y = 355;
   chave.color = 'yellow';
-  chave.desenhar(ctx);
+  chave.desenharLimites(ctx);
 };
 
 Map.prototype.acabou = function(ctx, pc){
@@ -396,11 +410,11 @@ Map.prototype.acabou = function(ctx, pc){
     ctx.strokeStyle = "black";
     ctx.font = "3em fantasy";
     var texto = "Parabéns!";
-    ctx.fillText(texto, 200, 200);
-    ctx.strokeText(texto, 200, 200); 
+    ctx.fillText(texto, 150, 150);
+    ctx.strokeText(texto, 150, 150);
     var texto = "Você Venceu!";
-    ctx.fillText(texto, 170, 300);
-    ctx.strokeText(texto, 170, 300);
+    ctx.fillText(texto, 120, 250);
+    ctx.strokeText(texto, 120, 250);
   }
 };
 
@@ -419,10 +433,10 @@ Map.prototype.verificaPerdeu = function(alvo){
     ctx.strokeStyle = "black";
     ctx.font = "3em fantasy";
     var texto = "Que pena!";
-    ctx.fillText(texto, 200, 200);
-    ctx.strokeText(texto, 200, 200); 
+    ctx.fillText(texto, 150, 150);
+    ctx.strokeText(texto, 150, 150); 
     var texto = "Você Perdeu!";
-    ctx.fillText(texto, 170, 300);
-    ctx.strokeText(texto, 170, 300);
+    ctx.fillText(texto, 120, 250);
+    ctx.strokeText(texto, 120, 250);
   }
 }
