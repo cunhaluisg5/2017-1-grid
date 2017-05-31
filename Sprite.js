@@ -8,6 +8,7 @@ function Sprite() {
   this.imageLib;
   this.pose = 0;
   this.frame = 0;
+  this.tiro = 0;
   this.poses = [
     {
       key: "pc",
@@ -63,28 +64,28 @@ function Sprite() {
       row: 8,
       col: 0,
       colMax: 0,
-      time: 8
+      time: 16//Alterei o tempo de execução
     },
     {
       key: "pc",
       row: 19,
       col: 0,
       colMax: 12,
-      time: 8
+      time: 16//Alterei o tempo de execução
     },
     {
       key: "pc",
       row: 18,
       col: 0,
       colMax: 12,
-      time: 8
+      time: 16//Alterei o tempo de execução
     },
     {
       key: "pc",
       row: 17,
       col: 0,
       colMax: 12,
-      time: 8
+      time: 16//Alterei o tempo de execução
     },
     {
       key: "pc",
@@ -121,62 +122,7 @@ function Sprite() {
       colMax: 0,
       time: 8
     },
-    {
-      key: "en",
-      row: 11,
-      col: 0,
-      colMax: 7,
-      time: 8
-    },
-    {
-      key: "en",
-      row: 10,
-      col: 0,
-      colMax: 7,
-      time: 8
-    },
-    {
-      key: "en",
-      row: 9,
-      col: 0,
-      colMax: 7,
-      time: 8
-    },
-    {
-      key: "en",
-      row: 8,
-      col: 0,
-      colMax: 7,
-      time: 8
-    },
-    {
-      key: "en",
-      row: 11,
-      col: 0,
-      colMax: 0,
-      time: 8
-    },
-    {
-      key: "en",
-      row: 10,
-      col: 0,
-      colMax: 0,
-      time: 8
-    },
-    {
-      key: "en",
-      row: 9,
-      col: 0,
-      colMax: 0,
-      time: 8
-    },
-    {
-      key: "en",
-      row: 8,
-      col: 0,
-      colMax: 0,
-      time: 8
-    },
+
   ]
 }
 
@@ -228,6 +174,17 @@ Sprite.prototype.mover = function(dt) {
 };
 
 Sprite.prototype.moverOnMap = function(map, dt) {
+  this.tiro-=dt;
+  //if(this.tiro <= 0.5) this.pose = 0;
+  if (pc.pose == 10 && pc.tiro<=0.5){
+    pc.pose = 6;
+  }else if (pc.pose == 11 && pc.tiro<=0.5){
+    pc.pose = 7;
+  }else if (pc.pose == 8 && pc.tiro<=0.5){
+    pc.pose = 4;
+  }else if (pc.pose == 9 && pc.tiro<=0.5){
+    pc.pose = 5;
+  }
   this.frame += this.poses[this.pose].time * dt;
   if (this.frame > this.poses[this.pose].colMax + 1) {
     this.frame = this.poses[this.pose].col;

@@ -13,7 +13,16 @@ function init() {
   ctx = tela.getContext('2d');
   imglib = new ImageLoader();
   imglib.load("pc", "pc.png");
-  imglib.load("en", "enemies.png");
+  imglib.load("enemie1", "Enemies/enemie1.png");
+  imglib.load("enemie2", "Enemies/enemie2.png");
+  imglib.load("enemie3", "Enemies/enemie3.png");
+  imglib.load("enemie4", "Enemies/enemie4.png");
+  imglib.load("enemie5", "Enemies/enemie5.png");
+  imglib.load("enemie6", "Enemies/enemie6.png");
+  imglib.load("enemie7", "Enemies/enemie7.png");
+  imglib.load("enemie8", "Enemies/enemie8.png");
+  imglib.load("enemie9", "Enemies/enemie9.png");
+  imglib.load("enemie10", "Enemies/enemie10.png");
   imglib.load("floor", "LPC Base Assets/tiles/dirt2.png");
   imglib.load("mountain", "LPC Base Assets/tiles/mountains.png");
   contador = 1;
@@ -69,6 +78,7 @@ function passo(t) {
 
 function configuraControles() {
   addEventListener("keydown", function(e) {
+    if (pc.tiro < 0.5){//Inclui para não permitir movimento enquanto atira
     switch (e.keyCode) {
       case 37:
         pc.vx = -100;
@@ -96,12 +106,16 @@ function configuraControles() {
         break;
     case 32:
         mapa.tiro(pc.x, pc.y, pc.dir);
+        pc.vx =0;//Inclui para parar o movimento enquanto atira
+        pc.vy = 0;//Inclui para parar o movimento enquanto atira
         e.preventDefault();
         break;
       default:
     }
+  }
   });
   addEventListener("keyup", function(e) {
+    if (pc.tiro < 0.5){//Inclui para não permitir movimento enquanto atira
     switch (e.keyCode) {
       case 37:
         pc.vx = 0;
@@ -125,5 +139,6 @@ function configuraControles() {
         break;
       default:
     }
+  }
   });
 }

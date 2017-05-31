@@ -89,6 +89,64 @@ Map.prototype.getIndices = function (sprite) {
 Map.prototype.criaInimigo = function (l,c) {
   var inimigo = new Sprite();
   inimigo.imageLib = this.imageLib;
+  inimigo.poses = [
+  {
+      key: "enemie"+contador,
+      row: 11,
+      col: 0,
+      colMax: 7,
+      time: 8
+    },
+    {
+      key: "enemie"+contador,
+      row: 10,
+      col: 0,
+      colMax: 7,
+      time: 8
+    },
+    {
+      key: "enemie"+contador,
+      row: 9,
+      col: 0,
+      colMax: 7,
+      time: 8
+    },
+    {
+      key: "enemie"+contador,
+      row: 8,
+      col: 0,
+      colMax: 7,
+      time: 8
+    },
+    {
+      key: "enemie"+contador,
+      row: 11,
+      col: 0,
+      colMax: 0,
+      time: 8
+    },
+    {
+      key: "enemie"+contador,
+      row: 10,
+      col: 0,
+      colMax: 0,
+      time: 8
+    },
+    {
+      key: "enemie"+contador,
+      row: 9,
+      col: 0,
+      colMax: 0,
+      time: 8
+    },
+    {
+      key: "enemie"+contador,
+      row: 8,
+      col: 0,
+      colMax: 0,
+      time: 8
+    },
+  ]
   inimigo.x = (c + 0.5) * this.SIZE;
   inimigo.y = (l + 0.5) * this.SIZE;
   this.enemies.push(inimigo);
@@ -120,27 +178,30 @@ Map.prototype.persegue = function(alvo) {
 }
 
 Map.prototype.tiro = function(x, y, dir){
+  if(pc.tiro > 0 ) return;
   var tiro = new Sprite();
   tiro.x = x;
   tiro.y = y;
   tiro.SIZE = 5;
   tiro.color = 'orange';
+  pc.tiro = 1;
+  tiro.tempo = 1;//Inclui pra adicionar tempo para cada tiro
   switch (dir) {
     case 1:
       pc.pose = 10;
-      tiro.vx = -200;
+      tiro.vx = -300;
     break;
     case 2:
       pc.pose = 11;
-      tiro.vy = -200;
+      tiro.vy = -300;
     break;
     case 3:
       pc.pose = 8;
-      tiro.vx = +200;
+      tiro.vx = +300;
     break;
     case 4:
       pc.pose = 9;
-      tiro.vy = +200;
+      tiro.vy = +300;
     break;
   }
   this.tiros.push(tiro);
@@ -160,7 +221,10 @@ Map.prototype.moverTirosOnMap = function(dt){
 
 Map.prototype.moverTiros = function(map, dt) {
   for (var i = 0; i < this.tiros.length; i++) {
-    this.tiros[i].mover(dt);
+    this.tiros[i].tempo = this.tiros[i].tempo - dt;//Incluí para subtraí dt do tempo de cada tiro
+    if (this.tiros[i].tempo < 0.8){//no 0.8 eu fixo o tempo que quero que o tiro saia
+      this.tiros[i].mover(dt);
+    }
   }
 };
 
@@ -434,7 +498,7 @@ Map.prototype.verificaPerdeu = function(alvo){
     ctx.font = "3em fantasy";
     var texto = "Que pena!";
     ctx.fillText(texto, 150, 150);
-    ctx.strokeText(texto, 150, 150); 
+    ctx.strokeText(texto, 150, 150);
     var texto = "Você Perdeu!";
     ctx.fillText(texto, 120, 250);
     ctx.strokeText(texto, 120, 250);
