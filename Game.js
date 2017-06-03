@@ -99,8 +99,14 @@ function configuraControles() {
         break;
       case 38:
         pc.vy = -100;
+        if (pc.vx == 0){
+          pc.pose = 3;
+        }else if (pc.vx > 0){
+          pc.pose = 0;
+        }else if (pc.vx < 0){
+          pc.pose = 2;
+        }
         pc.dir = 2;
-        pc.pose = 3;
         e.preventDefault();
         break;
       case 39:
@@ -111,8 +117,14 @@ function configuraControles() {
         break;
       case 40:
         pc.vy = +100;
+        if (pc.vx == 0){
+          pc.pose = 1;
+        }else if (pc.vx > 0){
+          pc.pose = 0;
+        } else if (pc.vx < 0){
+          pc.pose = 2;
+        }
         pc.dir = 4;
-        pc.pose = 1;
         e.preventDefault();
         break;
     case 32:
@@ -130,12 +142,24 @@ function configuraControles() {
     switch (e.keyCode) {
       case 37:
         pc.vx = 0;
-        pc.pose = 6;
+        if (pc.vy == 0){
+          pc.pose = 6;
+        }else if (pc.vy > 0){
+          pc.pose = 1;
+        }else if (pc.vy < 0){
+          pc.pose = 3;
+        }
         e.preventDefault();
         break;
       case 39:
         pc.vx = 0;
-        pc.pose = 4;
+        if (pc.vy == 0){
+          pc.pose = 4;
+        }else if (pc.vy > 0){
+          pc.pose = 1;
+        }else if (pc.vy < 0){
+          pc.pose = 3;
+        }
         e.preventDefault();
         break;
       case 38:
