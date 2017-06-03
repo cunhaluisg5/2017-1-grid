@@ -86,6 +86,8 @@ function passo(t) {
 function topoJogo(id){
   var vida = document.getElementById("Vida");
     vida.innerText = pc.vidas;
+    var inimigo = document.getElementById("Inimigo");
+    inimigo.innerText = mapa.enemies.length;
     var nivel = document.getElementById("Nivel");
     nivel.innerText = contador;
 }
