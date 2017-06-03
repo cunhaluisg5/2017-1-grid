@@ -8,7 +8,7 @@ var imglib;
 
 function init() {
   tela = document.getElementsByTagName('canvas')[0];
-  tela.width = 1088;
+  tela.width = 640;
   tela.height = 480;
   ctx = tela.getContext('2d');
   imglib = new ImageLoader();
@@ -61,6 +61,11 @@ function init() {
 }
 var k =0;
 function passo(t) {
+  ctx.save();
+  ctx.fillStyle = "white";
+  ctx.fillRect(0,0,tela.width,tela.height);
+  ctx.scale(2,2);
+  ctx.translate((Math.min(tela.width/4-pc.x, 0)),Math.min(tela.height/4-pc.y,0));
   dt = (t - antes) / 1000;
   ctx.clearRect(0, 0, tela.width, tela.height);
   id = requestAnimationFrame(passo);
@@ -81,6 +86,7 @@ function passo(t) {
   mapa.acabou(ctx, pc);
   mapa.verificaPerdeu(pc);
   antes = t;
+  ctx.restore();
 }
 
 function topoJogo(id){
