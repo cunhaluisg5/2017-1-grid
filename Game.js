@@ -64,7 +64,7 @@ function passo(t) {
   ctx.save();
   ctx.fillStyle = "white";
   ctx.fillRect(0,0,tela.width,tela.height);
-  ctx.scale(2,2);
+  ctx.scale(1.5,1.5);
   ctx.translate((Math.min(tela.width/4-pc.x, 0)),Math.min(tela.height/4-pc.y,0));
   dt = (t - antes) / 1000;
   ctx.clearRect(0, 0, tela.width, tela.height);
