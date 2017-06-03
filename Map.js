@@ -732,6 +732,190 @@ Map.prototype.desenharTiles = function(ctx) {
           this.imageLib.drawImageTile(ctx, "piso_muro", 0, contador - 1, 32, j * this.SIZE, i * this.SIZE);
           this.imageLib.drawImageTile(ctx, "objetos",25, 23, 32, j * this.SIZE, i * this.SIZE);
           break;
+          case 173:
+          this.imageLib.drawImageTile(ctx, "piso_muro", 0, contador - 1, 32, j * this.SIZE, i * this.SIZE);
+          this.imageLib.drawImageTile(ctx, "objetos",29, 10, 32, j * this.SIZE, i * this.SIZE);
+          break;
+          case 174:
+          this.imageLib.drawImageTile(ctx, "piso_muro", 0, contador - 1, 32, j * this.SIZE, i * this.SIZE);
+          this.imageLib.drawImageTile(ctx, "objetos",29, 11, 32, j * this.SIZE, i * this.SIZE);
+          break;
+          case 175:
+          this.imageLib.drawImageTile(ctx, "piso_muro", 0, contador - 1, 32, j * this.SIZE, i * this.SIZE);
+          this.imageLib.drawImageTile(ctx, "objetos",30, 10, 32, j * this.SIZE, i * this.SIZE);
+          break;
+          case 176:
+          this.imageLib.drawImageTile(ctx, "piso_muro", 0, contador - 1, 32, j * this.SIZE, i * this.SIZE);
+          this.imageLib.drawImageTile(ctx, "objetos",30, 11, 32, j * this.SIZE, i * this.SIZE);
+          break;
+          case 177:
+          this.imageLib.drawImageTile(ctx, "piso_muro", 0, contador - 1, 32, j * this.SIZE, i * this.SIZE);
+          this.imageLib.drawImageTile(ctx, "objetos",31, 10, 32, j * this.SIZE, i * this.SIZE);
+          break;
+          case 178:
+          this.imageLib.drawImageTile(ctx, "piso_muro", 0, contador - 1, 32, j * this.SIZE, i * this.SIZE);
+          this.imageLib.drawImageTile(ctx, "objetos",31, 11, 32, j * this.SIZE, i * this.SIZE);
+          break;
+          case 179:
+          this.imageLib.drawImageTile(ctx, "piso_muro", 0, contador - 1, 32, j * this.SIZE, i * this.SIZE);
+          this.imageLib.drawImageTile(ctx, "objetos",30, 19, 32, j * this.SIZE, i * this.SIZE);
+          break;
+          case 180:
+          this.imageLib.drawImageTile(ctx, "piso_muro", 0, contador - 1, 32, j * this.SIZE, i * this.SIZE);
+          this.imageLib.drawImageTile(ctx, "objetos",31, 19, 32, j * this.SIZE, i * this.SIZE);
+          break;
+          case 181:
+          this.imageLib.drawImageTile(ctx, "piso_muro", 0, contador - 1, 32, j * this.SIZE, i * this.SIZE);
+          this.imageLib.drawImageTile(ctx, "objetos",5, 23, 32, j * this.SIZE, i * this.SIZE);
+          break;
+          case 182:
+          this.imageLib.drawImageTile(ctx, "piso_muro", 0, contador - 1, 32, j * this.SIZE, i * this.SIZE);
+          this.imageLib.drawImageTile(ctx, "objetos",5, 24, 32, j * this.SIZE, i * this.SIZE);
+          break;
+          case 183:
+          this.imageLib.drawImageTile(ctx, "piso_muro", 0, contador - 1, 32, j * this.SIZE, i * this.SIZE);
+          this.imageLib.drawImageTile(ctx, "objetos",5, 25, 32, j * this.SIZE, i * this.SIZE);
+          break;
+          case 184:
+          this.imageLib.drawImageTile(ctx, "piso_muro", 0, contador - 1, 32, j * this.SIZE, i * this.SIZE);
+          this.imageLib.drawImageTile(ctx, "objetos",6, 23, 32, j * this.SIZE, i * this.SIZE);
+          break;
+          case 185:
+          this.imageLib.drawImageTile(ctx, "piso_muro", 0, contador - 1, 32, j * this.SIZE, i * this.SIZE);
+          this.imageLib.drawImageTile(ctx, "objetos",6, 24, 32, j * this.SIZE, i * this.SIZE);
+          break;
+          case 186:
+          this.imageLib.drawImageTile(ctx, "piso_muro", 0, contador - 1, 32, j * this.SIZE, i * this.SIZE);
+          this.imageLib.drawImageTile(ctx, "objetos",6, 25, 32, j * this.SIZE, i * this.SIZE);
+          break;
+          case 187:
+          this.imageLib.drawImageTile(ctx, "piso_muro", 0, contador - 1, 32, j * this.SIZE, i * this.SIZE);
+          this.imageLib.drawImageTile(ctx, "objetos",7, 23, 32, j * this.SIZE, i * this.SIZE);
+          break;
+          case 188:
+          this.imageLib.drawImageTile(ctx, "piso_muro", 0, contador - 1, 32, j * this.SIZE, i * this.SIZE);
+          this.imageLib.drawImageTile(ctx, "objetos",7, 24, 32, j * this.SIZE, i * this.SIZE);
+          break;
+          case 189:
+          this.imageLib.drawImageTile(ctx, "piso_muro", 0, contador - 1, 32, j * this.SIZE, i * this.SIZE);
+          this.imageLib.drawImageTile(ctx, "objetos",7, 25, 32, j * this.SIZE, i * this.SIZE);
+          break;
+          case 190:
+          this.imageLib.drawImageTile(ctx, "piso_muro", 0, contador - 1, 32, j * this.SIZE, i * this.SIZE);
+          this.imageLib.drawImageTile(ctx, "objetos",14, 22, 32, j * this.SIZE, i * this.SIZE);
+          break;
+          case 191:
+          this.imageLib.drawImageTile(ctx, "piso_muro", 0, contador - 1, 32, j * this.SIZE, i * this.SIZE);
+          this.imageLib.drawImageTile(ctx, "objetos",14, 23, 32, j * this.SIZE, i * this.SIZE);
+          break;
+          case 192:
+          this.imageLib.drawImageTile(ctx, "piso_muro", 0, contador - 1, 32, j * this.SIZE, i * this.SIZE);
+          this.imageLib.drawImageTile(ctx, "objetos",15, 22, 32, j * this.SIZE, i * this.SIZE);
+          break;
+          case 193:
+          this.imageLib.drawImageTile(ctx, "piso_muro", 0, contador - 1, 32, j * this.SIZE, i * this.SIZE);
+          this.imageLib.drawImageTile(ctx, "objetos",15, 23, 32, j * this.SIZE, i * this.SIZE);
+          break;
+          case 194:
+          this.imageLib.drawImageTile(ctx, "piso_muro", 0, contador - 1, 32, j * this.SIZE, i * this.SIZE);
+          this.imageLib.drawImageTile(ctx, "objetos",14, 20, 32, j * this.SIZE, i * this.SIZE);
+          break;
+          case 195:
+          this.imageLib.drawImageTile(ctx, "piso_muro", 0, contador - 1, 32, j * this.SIZE, i * this.SIZE);
+          this.imageLib.drawImageTile(ctx, "objetos",14, 21, 32, j * this.SIZE, i * this.SIZE);
+          break;
+          case 196:
+          this.imageLib.drawImageTile(ctx, "piso_muro", 0, contador - 1, 32, j * this.SIZE, i * this.SIZE);
+          this.imageLib.drawImageTile(ctx, "objetos",15, 20, 32, j * this.SIZE, i * this.SIZE);
+          break;
+          case 197:
+          this.imageLib.drawImageTile(ctx, "piso_muro", 0, contador - 1, 32, j * this.SIZE, i * this.SIZE);
+          this.imageLib.drawImageTile(ctx, "objetos",15, 21, 32, j * this.SIZE, i * this.SIZE);
+          break;
+          case 198:
+          this.imageLib.drawImageTile(ctx, "piso_muro", 0, contador - 1, 32, j * this.SIZE, i * this.SIZE);
+          this.imageLib.drawImageTile(ctx, "objetos",20, 23, 32, j * this.SIZE, i * this.SIZE);
+          break;
+          case 199:
+          this.imageLib.drawImageTile(ctx, "piso_muro", 0, contador - 1, 32, j * this.SIZE, i * this.SIZE);
+          this.imageLib.drawImageTile(ctx, "objetos",14, 18, 32, j * this.SIZE, i * this.SIZE);
+          break;
+          case 200:
+          this.imageLib.drawImageTile(ctx, "piso_muro", 0, contador - 1, 32, j * this.SIZE, i * this.SIZE);
+          this.imageLib.drawImageTile(ctx, "objetos",14, 19, 32, j * this.SIZE, i * this.SIZE);
+          break;
+          case 201:
+          this.imageLib.drawImageTile(ctx, "piso_muro", 0, contador - 1, 32, j * this.SIZE, i * this.SIZE);
+          this.imageLib.drawImageTile(ctx, "objetos",15, 18, 32, j * this.SIZE, i * this.SIZE);
+          break;
+          case 202:
+          this.imageLib.drawImageTile(ctx, "piso_muro", 0, contador - 1, 32, j * this.SIZE, i * this.SIZE);
+          this.imageLib.drawImageTile(ctx, "objetos",15, 19, 32, j * this.SIZE, i * this.SIZE);
+          break;
+          case 203:
+          this.imageLib.drawImageTile(ctx, "piso_muro", 0, contador - 1, 32, j * this.SIZE, i * this.SIZE);
+          this.imageLib.drawImageTile(ctx, "objetos",16, 18, 32, j * this.SIZE, i * this.SIZE);
+          break;
+          case 204:
+          this.imageLib.drawImageTile(ctx, "piso_muro", 0, contador - 1, 32, j * this.SIZE, i * this.SIZE);
+          this.imageLib.drawImageTile(ctx, "objetos",16, 19, 32, j * this.SIZE, i * this.SIZE);
+          break;
+          case 205:
+          this.imageLib.drawImageTile(ctx, "piso_muro", 0, contador - 1, 32, j * this.SIZE, i * this.SIZE);
+          this.imageLib.drawImageTile(ctx, "objetos",12, 18, 32, j * this.SIZE, i * this.SIZE);
+          break;
+          case 206:
+          this.imageLib.drawImageTile(ctx, "piso_muro", 0, contador - 1, 32, j * this.SIZE, i * this.SIZE);
+          this.imageLib.drawImageTile(ctx, "objetos",12, 19, 32, j * this.SIZE, i * this.SIZE);
+          break;
+          case 207:
+          this.imageLib.drawImageTile(ctx, "piso_muro", 0, contador - 1, 32, j * this.SIZE, i * this.SIZE);
+          this.imageLib.drawImageTile(ctx, "objetos",13, 18, 32, j * this.SIZE, i * this.SIZE);
+          break;
+          case 208:
+          this.imageLib.drawImageTile(ctx, "piso_muro", 0, contador - 1, 32, j * this.SIZE, i * this.SIZE);
+          this.imageLib.drawImageTile(ctx, "objetos",13, 19, 32, j * this.SIZE, i * this.SIZE);
+          break;
+          case 209:
+          this.imageLib.drawImageTile(ctx, "piso_muro", 0, contador - 1, 32, j * this.SIZE, i * this.SIZE);
+          this.imageLib.drawImageTile(ctx, "objetos",9, 20, 32, j * this.SIZE, i * this.SIZE);
+          break;
+          case 210:
+          this.imageLib.drawImageTile(ctx, "piso_muro", 0, contador - 1, 32, j * this.SIZE, i * this.SIZE);
+          this.imageLib.drawImageTile(ctx, "objetos",9, 21, 32, j * this.SIZE, i * this.SIZE);
+          break;
+          case 211:
+          this.imageLib.drawImageTile(ctx, "piso_muro", 0, contador - 1, 32, j * this.SIZE, i * this.SIZE);
+          this.imageLib.drawImageTile(ctx, "objetos",9, 22, 32, j * this.SIZE, i * this.SIZE);
+          break;
+          case 212:
+          this.imageLib.drawImageTile(ctx, "piso_muro", 0, contador - 1, 32, j * this.SIZE, i * this.SIZE);
+          this.imageLib.drawImageTile(ctx, "objetos",10, 20, 32, j * this.SIZE, i * this.SIZE);
+          break;
+          case 213:
+          this.imageLib.drawImageTile(ctx, "piso_muro", 0, contador - 1, 32, j * this.SIZE, i * this.SIZE);
+          this.imageLib.drawImageTile(ctx, "objetos",10, 21, 32, j * this.SIZE, i * this.SIZE);
+          break;
+          case 214:
+          this.imageLib.drawImageTile(ctx, "piso_muro", 0, contador - 1, 32, j * this.SIZE, i * this.SIZE);
+          this.imageLib.drawImageTile(ctx, "objetos",10, 22, 32, j * this.SIZE, i * this.SIZE);
+          break;
+          case 215:
+          this.imageLib.drawImageTile(ctx, "piso_muro", 0, contador - 1, 32, j * this.SIZE, i * this.SIZE);
+          this.imageLib.drawImageTile(ctx, "objetos",12, 20, 32, j * this.SIZE, i * this.SIZE);
+          break;
+          case 216:
+          this.imageLib.drawImageTile(ctx, "piso_muro", 0, contador - 1, 32, j * this.SIZE, i * this.SIZE);
+          this.imageLib.drawImageTile(ctx, "objetos",13, 20, 32, j * this.SIZE, i * this.SIZE);
+          break;
+          case 217:
+          this.imageLib.drawImageTile(ctx, "piso_muro", 0, contador - 1, 32, j * this.SIZE, i * this.SIZE);
+          this.imageLib.drawImageTile(ctx, "objetos",10, 15, 32, j * this.SIZE, i * this.SIZE);
+          break;
+          case 218:
+          this.imageLib.drawImageTile(ctx, "piso_muro", 0, contador - 1, 32, j * this.SIZE, i * this.SIZE);
+          this.imageLib.drawImageTile(ctx, "objetos",11, 15, 32, j * this.SIZE, i * this.SIZE);
+          break;
         case 5:
           break;
         default:
@@ -1090,83 +1274,78 @@ Map.prototype.testarFim = function(map){
   ])
     } else if (contador == 3){
       fases = ([
-    [  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5],
     [  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1],
-    [  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1],
-    [  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1],
-    [  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1],
-    [  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1],
-    [  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  9,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1],
-    [  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1],
-    [  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1],
-    [  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,143,  0,  0,  0,  0,  0,  0,  1],
-    [  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,142,  0,  0,  0,  0,  0,  0,  1],
-    [  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1],
-    [  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1],
-    [  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1],
-    [  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1],
+    [  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,173,174,  0,  0,  1,  0,144,  0,  0,  0,  0,  0,  0,  1],
+    [  1,  0,  0,  0,  0,  0,  0,  0,  0,  1,  0,  0,179,  1,  1,  0,  0,  1,  1,  0,175,176,  0,  0,  1,  0,  0,  0,  1,  0,  0,  0,  0,  1],
+    [  1,  1,  1,  1,  0,  0,  0,  0,  0,  9,  0,  0,180,  0,  0,  0,  0,  0,  0,  0,177,178,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1],
+    [  1,  0,  0,  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1,  9,  0,  0,  0,  0,  1,  0,  1],
+    [  1,  0,  0,  1,  0,  0,  0,  0,  0,  0,  9,  0,  0,  0,  1,  9,  0,  1,  1,  0,  0,  1,  1,  0,  0,  0,  0,  0,  0,  1,  1,  0,  0,  1],
+    [  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1,  0,  0,  0,  0,  0,  0,  0,  1],
+    [  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,179,  0,  0,  0,  0,  0,  0,  0,  1,  0,179,  1],
+    [  1,  0,179,  1,  0,  0,  0,  0,173,174,  0,  0,173,174,  0,  0,  0,  0,  0,  0,  0,  0,180,  0,  0,  0,143,  0,  0,  0,  0,  0,180,  1],
+    [  1,  0,180,  0,  0,  0,  0,  0,175,176,  0,  0,175,176,  0,  0,  0,  0,  0,  0,  0,  0,  0,  9,  0,  0,142,  0,  0,  0,  0,  0,  0,  1],
+    [  1,  0,  0,  0,  0,  0,  0,  0,177,178,  0,  0,177,178,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1,  0,  0,  1],
+    [  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1,  0,  1,  0,  1,  0,  1],
+    [  1,  9,  0,  1,  0,  0,  0,  1,  0,  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,179,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1],
+    [  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  9,  0,  0,  0,  0,  0,180,  0,  1,  1,  0,  9,  0,  0,  0,  0,  0,  0,  0,  1],
     [  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1],
   ])
     } else if (contador == 4){
       fases = ([
-    [  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5],
     [  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1],
-    [  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1],
-    [  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1],
-    [  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1],
-    [  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1],
-    [  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  9,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1],
-    [  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1],
-    [  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1],
-    [  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,143,  0,  0,  0,  0,  0,  0,  1],
-    [  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,142,  0,  0,  0,  0,  0,  0,  1],
-    [  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1],
-    [  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1],
-    [  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1],
-    [  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1],
+    [  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  9,  0,  0,  0,  0,  0,  0,  0,190,191,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1],
+    [  1,  0,  0,  0,198,  0,  0,  1,  0,  0,  0,  0,  0,  0,198,  0,  0,  0,192,193,  0,  0,  1,  0,  0,  0,  0,  0,  1,  0,198,  0,  0,  1],
+    [  1,  0,  0,  0,  0,  0,  1,  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1,  0,  0,  0,  0,  0,  0,  0,  1,  0,  0,  0,  0,  1],
+    [  1,  0,  0,  0,  0,  0,  0,  1,  0,  0,198,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,198,  0,  0,  0,  0,  0,  0,  1,  0,  1,  0,  1],
+    [  1,  0,  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  9,  0,  0,  0,  0,  0,  0,198,198,  0,  9,  0,  0,  0,  0,  0,  0,  0,  1],
+    [  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,181,182,183,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1],
+    [  1,  0,  0,  0,  0,  0,  9,  0,  1,  0,  0,184,185,186,  0,  1,  0,  0,  1,  0,  0,  0,  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  9,  1],
+    [  1,  0,  1,  0,  0,  0,  0,  0,  0,  0,  0,187,188,189,  0,  0,  0,  0,  0,  9,  0,  0,  0,  0,  0,  0,143,  0,  0,  1,  0,  0,  0,  1],
+    [  1,  0,  0,  0,  0,  0,198,  0,  0,  0,  0,  0,  0,  0,  1,  0,  0,  0,  1,  0,  0,  0,  0,  1,  0,  0,142,  0,  0,  0,  0,  0,  1,  1],
+    [  1,  0,  9,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1,  0,  0,  0,  9,  0,  0,  0,198,  0,  0,  1],
+    [  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,198,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1],
+    [  1,198,  0,  0,  0,  0,  0,  0,198,  0,  0,  0,  0,  0,  0,  0,  1,  0,  0,  0,198,  0,  0,  0,194,195,  0,  1,  0,  0,  0,  0,  0,  1],
+    [  1,  0,  0,  0,  0,  0,  0,  0,  9,  0,  0,  0,  1,  0,144,  9,  0,  0,  0,  0,  0,  0,  0,  0,196,197,  0,  0,  0,  0,  0,  0,  0,  1],
     [  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1],
   ])
     } else if (contador == 5){
       fases = ([
-    [  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5],
     [  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1],
-    [  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1],
-    [  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1],
-    [  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1],
-    [  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1],
-    [  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  9,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1],
-    [  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1],
-    [  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1],
-    [  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,143,  0,  0,  0,  0,  0,  0,  1],
-    [  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,142,  0,  0,  0,  0,  0,  0,  1],
-    [  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1],
-    [  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1],
-    [  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1],
-    [  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1],
+    [  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  9,  0,  0,  1],
+    [  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1,  0,  1,  0,  1,  0,  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1],
+    [  1,  0,  0,  0,  0,  0,205,206,  0,  0,  0,  0,  0,  1,  0,  0,  0,  0,  1,  0,  0,  0,  1,  0,  0,  0,  0,  0,  0,205,206,  0,  0,  1],
+    [  1,  0,  0,  0,  0,  0,207,208,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,207,208,  0,  0,  1],
+    [  1,  0,  0,  0,  1,  9,  0,  0,  0,  1,  9,  0,  0,  0,  0,  9,  0,  0,  0,199,200,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1],
+    [  1,  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1,  0,  0,  0,  0,  0,201,202,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1],
+    [  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,203,204,  9,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1],
+    [  1,  0,  0,  0,  0,  1,  0,  0,  0,  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,143,  0,  0,  0,  0,  0,  0,  1],
+    [  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1,  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,142,  0,  0,  0,  0,  0,  0,  1],
+    [  1,  0,  0,  0,  0,144,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1],
+    [  1,  0,205,206,  0,  0,  0,  0,  0,  1,  0,  0,199,200,  0,  0,  0,  0,  0,  0,  0,  0,  1,  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1],
+    [  1,  0,207,208,  0,  0,  0,  9,  0,  1,  0,  0,201,202,  0,  0,  0,  1,  0,  0,  9,  0,  0,  1,  0,  0,  0,  0,144,  0,  0,  0,  0,  1],
+    [  1,  9,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,203,204,  0,  9,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  9,  0,  0,  1],
     [  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1],
   ])
     } else if (contador == 6){
       fases = ([
-    [  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5],
     [  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1],
-    [  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1],
-    [  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1],
-    [  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1],
-    [  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1],
-    [  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  9,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1],
-    [  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1],
-    [  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1],
-    [  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,143,  0,  0,  0,  0,  0,  0,  1],
-    [  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,142,  0,  0,  0,  0,  0,  0,  1],
-    [  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1],
-    [  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1],
-    [  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1],
-    [  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1],
+    [  1,  0,  0,  0,  0,  1,  9,  0,  0,  0,  0,  0,  0,209,210,211,215,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1,  1],
+    [  1,  0,  0,  1,  0,  0,  1,  0,  0,  0,  0,  0,  0,212,213,214,216,  0,  0,  1,  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1],
+    [  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,144,  0,  0,  0,  0,  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,217,  0,  1],
+    [  1,  0,  0,  0,  0,217,  0,  0,  0,  1,  9,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,217,  0,  0,  1,  0,  0,  0,218,  0,  1],
+    [  1,  0,  1,  0,  0,218,  0,  0,  1,  0,  0,  0,  0,  0,  0,  9,  1,  0,  0,  0,  9,  0,  0,  0,218,  0,  0,  1,  0,  0,  0,  0,  0,  1],
+    [  1,  1,  0,  0,  0,  0,  0,  0,  1,  1,  0,  0,  0,217,  0,  0,  1,  1,  0,  0,  0,  0,  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1],
+    [  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,218,  0,  0,  0,  0,  0,  0,  0,  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  9,  1],
+    [  1,  0,  1,  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1,  0,  0,  0,  0,  0,143,  0,  0,  0,  1,  1,  0,  1],
+    [  1,  1,  0,  0,  1,  0,  0,  9,  0,  0,  1,  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,142,  0,  0,  0,  1,  1,  0,  1],
+    [  1,  0,  0,  0,  0,  1,  0,  0,  0,  0,  0,  1,  0,  0,  0,  0,  0,  0,217,  0,  0,  9,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1],
+    [  1,  0,217,  0,  9,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,218,  0,  0,  0,  0,  1,  0,  0,  0,  0,  0,  0,  1,  0,  0,  1],
+    [  1,  9,218,  0,  0,  1,  0,  0,  0,217,  0,  0,  0,  9,  0,  0,  0,  0,  0,  0,  0,  1,  0,  1,  1,  0,  0,144,  0,  0,  1,  0,  0,  1],
+    [  1,  0,  0,  0,  0,  0,  0,  0,  0,218,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1,  0,  0,  0,  0,  0,  9,  0,  0,  0,  0,  0,  1],
     [  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1],
   ])
     } else if (contador == 7){
       fases = ([
-    [  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5],
     [  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1],
     [  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1],
     [  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1],
@@ -1185,7 +1364,6 @@ Map.prototype.testarFim = function(map){
   ])
     } else if (contador == 8){
       fases = ([
-    [  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5],
     [  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1],
     [  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1],
     [  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1],
@@ -1204,7 +1382,6 @@ Map.prototype.testarFim = function(map){
   ])
     } else if (contador == 9){
       fases = ([
-    [  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5],
     [  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1],
     [  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1],
     [  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1],
@@ -1223,7 +1400,6 @@ Map.prototype.testarFim = function(map){
   ])
     } else if (contador == 10){
       fases = ([
-    [  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5],
     [  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1],
     [  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1],
     [  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1],
