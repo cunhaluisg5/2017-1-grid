@@ -14,8 +14,9 @@ function init() {
   imglib = new ImageLoader();
   imglib.load("pc", "pc.png");
   imglib.load("piso_muro", "Imagens/piso_muro.png");
-  imglib.load("architecture", "Imagens/Architecture.png");
-  imglib.load("terrain", "Imagens/Terrain.png");
+  imglib.load("architecture", "Imagens/architecture.png");
+  imglib.load("terrain", "Imagens/terrain.png");
+  imglib.load("coins", "Imagens/coins.png");
   imglib.load("enemie1", "Enemies/enemie1.png");
   imglib.load("enemie2", "Enemies/enemie2.png");
   imglib.load("enemie3", "Enemies/enemie3.png");
@@ -38,7 +39,7 @@ function init() {
     [  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,129,126, 33, 29, 24, 19, 13, 39, 44, 49, 53,133,136,  1],
     [  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,128,125, 34, 30, 25, 20, 14, 40, 45, 50, 54,132,135,  1],
     [  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,124,116, 35, 31, 26, 21, 15, 41, 46, 51, 55,123,131,  1],
-    [  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,115, 56, 57, 58, 59, 60, 61, 62, 63, 64,122,  0,  1],
+    [  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,144,  0,  0,115, 56, 57, 58, 59, 60, 61, 62, 63, 64,122,  0,  1],
     [  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,114, 65, 66, 67, 68, 69, 70, 71, 72, 73,121,  0,  1],
     [  1,  0,  0,  0,  0,  0,  9,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,113, 74, 75, 76, 77, 78, 79, 80, 81, 82,120,  0,  1],
     [  1,  9,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,112, 83, 84, 85, 86, 87, 88, 89, 90, 91,119,  0,  1],
@@ -66,6 +67,7 @@ function passo(t) {
   topoJogo(id);
   mapa.persegue(pc);
   mapa.testarColisao(pc);
+  mapa.testarColisaoMoeda(pc);
   mapa.testarColisaoTiros(mapa);
   pc.moverOnMap(mapa, dt);
   mapa.moverInimigosOnMap(mapa, dt);
@@ -73,6 +75,7 @@ function passo(t) {
   mapa.desenhar(ctx);
   mapa.desenharTiros(ctx);
   pc.desenhar(ctx);
+  mapa.moverAnimacao(dt);
   //imglib.drawImageTile(ctx, "en", 3, 0, 64, 0, 0);
   mapa.testarFim(mapa);
   mapa.acabou(ctx, pc);

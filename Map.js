@@ -2,6 +2,7 @@ function Map(l, c) {
   this.SIZE = 32;
   this.cells = [];
   this.enemies = [];
+  this.coins = [];
   this.imageLib = null;
   this.tiros = [];
 
@@ -617,6 +618,7 @@ Map.prototype.desenharTiles = function(ctx) {
     }
   }
   this.desenharInimigos(ctx);
+  this.desenharMoeda(ctx);
 };
 
 Map.prototype.loadMap = function(map) {
@@ -629,7 +631,7 @@ Map.prototype.loadMap = function(map) {
         break;
         case 144:
           this.cells[i][j] = 0;
-          this.criaInimigo(i,j, "chefe");
+          this.criaMoeda(i,j);
         break;
         default:
           this.cells[i][j] = map[i][j];
@@ -738,6 +740,84 @@ Map.prototype.persegue = function(alvo) {
   }
 }
 
+Map.prototype.criaMoeda = function (l,c) {
+  var moeda = new Sprite();
+  moeda.imageLib = this.imageLib;
+  moeda.poses = [
+  {
+      key: "coins",
+      row: 0,
+      col: 0,
+      colMax: 7,
+      time: 8
+    },
+    {
+      key: "coins",
+      row: 0,
+      col: 1,
+      colMax: 7,
+      time: 8
+    },
+    {
+      key: "coins",
+      row: 0,
+      col: 2,
+      colMax: 7,
+      time: 8
+    },
+    {
+      key: "coins",
+      row: 0,
+      col: 3,
+      colMax: 7,
+      time: 8
+    },
+    {
+      key: "coins",
+      row: 0,
+      col: 4,
+      colMax: 7,
+      time: 8
+    },
+    {
+      key: "coins",
+      row: 0,
+      col: 5,
+      colMax: 7,
+      time: 8
+    },
+    {
+      key: "coins",
+      row: 0,
+      col: 6,
+      colMax: 7,
+      time: 8
+    },
+    {
+      key: "coins",
+      row: 0,
+      col: 7,
+      colMax: 7,
+      time: 8
+    },
+  ]
+  moeda.x = (c + 0.5) * this.SIZE;
+  moeda.y = (l + 0.5) * this.SIZE;
+  this.coins.push(moeda);
+};
+
+Map.prototype.desenharMoeda = function(ctx) {
+  for (var i = 0; i < this.coins.length; i++) {
+    this.coins[i].desenharPoseObjetos(ctx);
+  }
+}
+
+Map.prototype.moverAnimacao = function(dt) {
+  for (var i = 0; i < this.coins.length; i++) {
+    this.coins[i].animacao(dt);
+  }
+}
+
 Map.prototype.tiro = function(x, y, dir){
   if(pc.tiro > 0 ) return;
   var tiro = new Sprite();
@@ -799,6 +879,15 @@ Map.prototype.testarColisao = function(alvo){
   }
 };
 
+Map.prototype.testarColisaoMoeda = function(alvo){
+  for (var i = 0; i < this.coins.length; i++) {
+    if(alvo.colidiuCom(this.coins[i])){
+      alvo.vidas++;
+      this.coins.splice(i,1);
+    }
+  }
+};
+
 Map.prototype.testarColisaoTiros = function(map){
   for (var i = 0; i < this.enemies.length; i++) {
     for (var j = this.tiros.length - 1; j >= 0; j--) {
@@ -836,7 +925,7 @@ Map.prototype.testarFim = function(map){
     for (var i = 0; i < this.cells.length; i++) {
       var linha = this.cells[i];
       for (var j = 0; j < linha.length; j++) {
-        //this.desenhaChave(ctx);
+        this.coins.splice(i,1);
       }
     }
   }
@@ -851,7 +940,7 @@ Map.prototype.testarFim = function(map){
     [  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,129,126, 33, 29, 24, 19, 13, 39, 44, 49, 53,133,136,  1],
     [  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,128,125, 34, 30, 25, 20, 14, 40, 45, 50, 54,132,135,  1],
     [  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,124,116, 35, 31, 26, 21, 15, 41, 46, 51, 55,123,131,  1],
-    [  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,115, 56, 57, 58, 59, 60, 61, 62, 63, 64,122,  0,  1],
+    [  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,144,  0,  0,115, 56, 57, 58, 59, 60, 61, 62, 63, 64,122,  0,  1],
     [  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,114, 65, 66, 67, 68, 69, 70, 71, 72, 73,121,  0,  1],
     [  1,  0,  0,  0,  0,  0,  9,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,113, 74, 75, 76, 77, 78, 79, 80, 81, 82,120,  0,  1],
     [  1,  9,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,112, 83, 84, 85, 86, 87, 88, 89, 90, 91,119,  0,  1],
@@ -868,7 +957,7 @@ Map.prototype.testarFim = function(map){
     [  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1],
     [  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1],
     [  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1],
-    [  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1],
+    [  1,  0,144,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1],
     [  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  9,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1],
     [  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1],
     [  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1],

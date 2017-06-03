@@ -153,6 +153,23 @@ Sprite.prototype.desenharPose = function(ctx) {
   console.log(Math.floor(this.frame));*/
 }
 
+Sprite.prototype.desenharPoseObjetos = function(ctx) {
+  ctx.fillStyle = "black";
+  ctx.globalAlpha = 0.4;
+  ctx.beginPath();
+  ctx.arc(this.x - 15, this.y -15, this.SIZE / 2, 0, 2 * Math.PI);
+  ctx.closePath();
+  ctx.fill();
+  ctx.globalAlpha = 1;
+  this.imageLib.drawImageTile(ctx,
+    this.poses[this.pose].key,
+    this.poses[this.pose].row,
+    this.poses[this.pose].col + Math.floor(this.frame),
+    32,
+    this.x - 32, this.y - 53
+  );
+}
+
 Sprite.prototype.desenharLimites = function(ctx) {
   ctx.fillStyle = "yellow";
   ctx.fillRect(
@@ -217,6 +234,12 @@ Sprite.prototype.moverOnMap = function(map, dt) {
   }
 };
 
+Sprite.prototype.animacao = function(dt){
+  this.frame += this.poses[this.pose].time * dt;
+  if (this.frame > this.poses[this.pose].colMax + 1) {
+    this.frame = this.poses[this.pose].col;
+  }
+}
 
 Sprite.prototype.persegue = function(alvo) {
   var dist = Math.sqrt(Math.pow(alvo.x - this.x, 2) + Math.pow(alvo.y - this.y, 2));
