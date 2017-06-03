@@ -9,7 +9,7 @@ var imglib;
 function init() {
   tela = document.getElementsByTagName('canvas')[0];
   tela.width = 1088;
-  tela.height = 512;
+  tela.height = 480;
   ctx = tela.getContext('2d');
   imglib = new ImageLoader();
   imglib.load("pc", "pc.png");
@@ -30,10 +30,9 @@ function init() {
   imglib.load("enemie10", "Enemies/enemie10.png");
   contador = 1
   open = 0;
-  mapa = new Map(16, 34);
+  mapa = new Map(15, 34);
   mapa.imageLib = imglib;
   fases = ([
-    [  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5],
     [  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1, 16, 10, 36,  1,  1,  1,  1,  1,  1],
     [  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  9,  0,  0,  0,  0,  0,  0,  0, 27, 22, 17, 11, 37, 42, 47,  0,  0,  0,  1],
     [  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1,  1,  0,  0,130,127, 32, 28, 23, 18, 12, 38, 43, 48, 52,134,137,  1],
