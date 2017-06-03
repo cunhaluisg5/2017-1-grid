@@ -611,6 +611,99 @@ Map.prototype.desenharTiles = function(ctx) {
           this.imageLib.drawImageTile(ctx, "architecture", 14, 19, 32, j * this.SIZE, i * this.SIZE);
           }
           break;
+          case 145:
+          this.imageLib.drawImageTile(ctx, "piso_muro", 0, contador - 1, 32, j * this.SIZE, i * this.SIZE);
+          this.imageLib.drawImageTile(ctx, "objetos", 0, 17, 32, j * this.SIZE, i * this.SIZE);
+          break;
+          case 146:
+          this.imageLib.drawImageTile(ctx, "piso_muro", 0, contador - 1, 32, j * this.SIZE, i * this.SIZE);
+          this.imageLib.drawImageTile(ctx, "objetos", 1, 17, 32, j * this.SIZE, i * this.SIZE);
+          break;
+          case 147:
+          this.imageLib.drawImageTile(ctx, "piso_muro", 0, contador - 1, 32, j * this.SIZE, i * this.SIZE);
+          this.imageLib.drawImageTile(ctx, "objetos", 2, 17, 32, j * this.SIZE, i * this.SIZE);
+          break;
+          case 148:
+          this.imageLib.drawImageTile(ctx, "piso_muro", 0, contador - 1, 32, j * this.SIZE, i * this.SIZE);
+          this.imageLib.drawImageTile(ctx, "objetos", 0, 16, 32, j * this.SIZE, i * this.SIZE);
+          break;
+          case 149:
+          this.imageLib.drawImageTile(ctx, "piso_muro", 0, contador - 1, 32, j * this.SIZE, i * this.SIZE);
+          this.imageLib.drawImageTile(ctx, "objetos", 1, 16, 32, j * this.SIZE, i * this.SIZE);
+          break;
+          case 150:
+          this.imageLib.drawImageTile(ctx, "piso_muro", 0, contador - 1, 32, j * this.SIZE, i * this.SIZE);
+          this.imageLib.drawImageTile(ctx, "objetos", 2, 16, 32, j * this.SIZE, i * this.SIZE);
+          break;
+          case 151:
+          this.imageLib.drawImageTile(ctx, "piso_muro", 0, contador - 1, 32, j * this.SIZE, i * this.SIZE);
+          this.imageLib.drawImageTile(ctx, "objetos", 0, 18, 32, j * this.SIZE, i * this.SIZE);
+          break;
+          case 152:
+          this.imageLib.drawImageTile(ctx, "piso_muro", 0, contador - 1, 32, j * this.SIZE, i * this.SIZE);
+          this.imageLib.drawImageTile(ctx, "objetos", 1, 18, 32, j * this.SIZE, i * this.SIZE);
+          break;
+          case 153:
+          this.imageLib.drawImageTile(ctx, "piso_muro", 0, contador - 1, 32, j * this.SIZE, i * this.SIZE);
+          this.imageLib.drawImageTile(ctx, "objetos", 2, 18, 32, j * this.SIZE, i * this.SIZE);
+          break;
+          case 154:
+          this.imageLib.drawImageTile(ctx, "piso_muro", 0, contador - 1, 32, j * this.SIZE, i * this.SIZE);
+          this.imageLib.drawImageTile(ctx, "terrain",22, 3, 32, j * this.SIZE, i * this.SIZE);
+          this.imageLib.drawImageTile(ctx, "objetos", 4, 11, 32, j * this.SIZE, i * this.SIZE);
+          break;
+          case 155:
+          this.imageLib.drawImageTile(ctx, "piso_muro", 0, contador - 1, 32, j * this.SIZE, i * this.SIZE);
+          this.imageLib.drawImageTile(ctx, "terrain",23, 3, 32, j * this.SIZE, i * this.SIZE);
+          this.imageLib.drawImageTile(ctx, "objetos", 5, 11, 32, j * this.SIZE, i * this.SIZE);
+          break;
+          case 156:
+          this.imageLib.drawImageTile(ctx, "piso_muro", 0, contador - 1, 32, j * this.SIZE, i * this.SIZE);
+          this.imageLib.drawImageTile(ctx, "terrain",23, 3, 32, j * this.SIZE, i * this.SIZE);
+          this.imageLib.drawImageTile(ctx, "objetos", 6, 11, 32, j * this.SIZE, i * this.SIZE);
+          break;
+          case 157:
+          this.imageLib.drawImageTile(ctx, "piso_muro", 0, contador - 1, 32, j * this.SIZE, i * this.SIZE);
+          this.imageLib.drawImageTile(ctx, "terrain",22, 4, 32, j * this.SIZE, i * this.SIZE);
+          this.imageLib.drawImageTile(ctx, "objetos", 4, 12, 32, j * this.SIZE, i * this.SIZE);
+          break;
+          case 158:
+          this.imageLib.drawImageTile(ctx, "piso_muro", 0, contador - 1, 32, j * this.SIZE, i * this.SIZE);
+          this.imageLib.drawImageTile(ctx, "terrain",23, 4, 32, j * this.SIZE, i * this.SIZE);
+          this.imageLib.drawImageTile(ctx, "objetos", 5, 12, 32, j * this.SIZE, i * this.SIZE);
+          break;
+          case 159:
+          this.imageLib.drawImageTile(ctx, "piso_muro", 0, contador - 1, 32, j * this.SIZE, i * this.SIZE);
+          this.imageLib.drawImageTile(ctx, "terrain",23, 4, 32, j * this.SIZE, i * this.SIZE);
+          this.imageLib.drawImageTile(ctx, "objetos", 6, 12, 32, j * this.SIZE, i * this.SIZE);
+          break;
+          case 160:
+          this.imageLib.drawImageTile(ctx, "piso_muro", 0, contador - 1, 32, j * this.SIZE, i * this.SIZE);
+          this.imageLib.drawImageTile(ctx, "terrain",22, 5, 32, j * this.SIZE, i * this.SIZE);
+          this.imageLib.drawImageTile(ctx, "objetos", 4, 13, 32, j * this.SIZE, i * this.SIZE);
+          break;
+          case 161:
+          this.imageLib.drawImageTile(ctx, "piso_muro", 0, contador - 1, 32, j * this.SIZE, i * this.SIZE);
+          this.imageLib.drawImageTile(ctx, "terrain",23, 5, 32, j * this.SIZE, i * this.SIZE);
+          this.imageLib.drawImageTile(ctx, "objetos", 5, 13, 32, j * this.SIZE, i * this.SIZE);
+          break;
+          case 162:
+          this.imageLib.drawImageTile(ctx, "piso_muro", 0, contador - 1, 32, j * this.SIZE, i * this.SIZE);
+          this.imageLib.drawImageTile(ctx, "terrain",23, 5, 32, j * this.SIZE, i * this.SIZE);
+          this.imageLib.drawImageTile(ctx, "objetos", 6, 13, 32, j * this.SIZE, i * this.SIZE);
+          break;
+          case 163:
+          this.imageLib.drawImageTile(ctx, "piso_muro", 0, contador - 1, 32, j * this.SIZE, i * this.SIZE);
+          this.imageLib.drawImageTile(ctx, "terrain",23, 3, 32, j * this.SIZE, i * this.SIZE);
+          break;
+          case 164:
+          this.imageLib.drawImageTile(ctx, "piso_muro", 0, contador - 1, 32, j * this.SIZE, i * this.SIZE);
+          this.imageLib.drawImageTile(ctx, "terrain",23, 4, 32, j * this.SIZE, i * this.SIZE);
+          break;
+          case 165:
+          this.imageLib.drawImageTile(ctx, "piso_muro", 0, contador - 1, 32, j * this.SIZE, i * this.SIZE);
+          this.imageLib.drawImageTile(ctx, "terrain",23, 5, 32, j * this.SIZE, i * this.SIZE);
+          break;
         case 5:
           break;
         default:
