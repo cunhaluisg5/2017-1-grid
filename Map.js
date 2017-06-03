@@ -1282,7 +1282,8 @@ Map.prototype.testarFim = function(map){
       }
     }
   }
-  if(this.enemies.length == 0 && pc.x > 840 && pc.x < 887 && pc.y < 375){
+  console.log(pc.y);
+  if(this.enemies.length == 0 && pc.x > 840 && pc.x < 887 && pc.y > 327 && pc.y < 344){
     contador = contador + 1;
     if (contador == 1){
       fases = ([
