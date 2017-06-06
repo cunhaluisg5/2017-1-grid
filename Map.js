@@ -1102,56 +1102,56 @@ Map.prototype.criaMoeda = function (l,c) {
       row: 0,
       col: 0,
       colMax: 7,
-      time: 8
+      time: 24
     },
     {
       key: "coins",
       row: 0,
       col: 1,
       colMax: 7,
-      time: 8
+      time: 24
     },
     {
       key: "coins",
       row: 0,
       col: 2,
       colMax: 7,
-      time: 8
+      time: 24
     },
     {
       key: "coins",
       row: 0,
       col: 3,
       colMax: 7,
-      time: 8
+      time: 24
     },
     {
       key: "coins",
       row: 0,
       col: 4,
       colMax: 7,
-      time: 8
+      time: 24
     },
     {
       key: "coins",
       row: 0,
       col: 5,
       colMax: 7,
-      time: 8
+      time: 24
     },
     {
       key: "coins",
       row: 0,
       col: 6,
       colMax: 7,
-      time: 8
+      time: 24
     },
     {
       key: "coins",
       row: 0,
       col: 7,
       colMax: 7,
-      time: 8
+      time: 24
     },
   ]
   moeda.x = (c + 0.5) * this.SIZE;
@@ -1476,7 +1476,7 @@ Map.prototype.testarFim = function(map){
 };
 
 Map.prototype.acabou = function(ctx, pc){
-  if(contador > 1){
+  if(contador > 10){
   	cancelAnimationFrame(id);
     for (var i = 0; i < this.cells.length; i++) {
       var linha = this.cells[i];
