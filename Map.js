@@ -1282,7 +1282,6 @@ Map.prototype.testarFim = function(map){
       }
     }
   }
-  console.log(pc.y);
   if(this.enemies.length == 0 && pc.x > 840 && pc.x < 887 && pc.y > 327 && pc.y < 344){
     contador = contador + 1;
     if (contador == 1){
@@ -1476,16 +1475,9 @@ Map.prototype.testarFim = function(map){
   }
 };
 
-Map.prototype.desenhaChave = function(ctx){
-  var chave = new Sprite();
-  chave.x = 465;
-  chave.y = 355;
-  chave.color = 'yellow';
-  chave.desenharLimites(ctx);
-};
-
 Map.prototype.acabou = function(ctx, pc){
-  if(contador > 10){
+  if(contador > 1){
+  	cancelAnimationFrame(id);
     for (var i = 0; i < this.cells.length; i++) {
       var linha = this.cells[i];
       for (var j = 0; j < linha.length; j++) {
@@ -1493,16 +1485,15 @@ Map.prototype.acabou = function(ctx, pc){
       }
     }
     tela.style.border = "thick solid #843232";
-    tela.style.backgroundColor = "#d2c41d";
-    ctx.fillStyle = "#843232";
+    ctx.fillStyle = "#d2c41d";
     ctx.strokeStyle = "black";
     ctx.font = "3em fantasy";
     var texto = "Parabéns!";
-    ctx.fillText(texto, 150, 150);
-    ctx.strokeText(texto, 150, 150);
+    ctx.fillText(texto, 800, 350);
+    ctx.strokeText(texto, 800, 350);
     var texto = "Você Venceu!";
-    ctx.fillText(texto, 120, 250);
-    ctx.strokeText(texto, 120, 250);
+    ctx.fillText(texto, 770, 450);
+    ctx.strokeText(texto, 770, 450);
   }
 };
 
@@ -1521,10 +1512,10 @@ Map.prototype.verificaPerdeu = function(alvo){
     ctx.strokeStyle = "black";
     ctx.font = "3em fantasy";
     var texto = "Que pena!";
-    ctx.fillText(texto, 150, 150);
-    ctx.strokeText(texto, 150, 150);
+    ctx.fillText(texto, 110, 150);
+    ctx.strokeText(texto, 110, 150);
     var texto = "Você Perdeu!";
-    ctx.fillText(texto, 120, 250);
-    ctx.strokeText(texto, 120, 250);
+    ctx.fillText(texto, 80, 250);
+    ctx.strokeText(texto, 80, 250);
   }
 }
