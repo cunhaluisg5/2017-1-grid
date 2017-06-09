@@ -4,7 +4,6 @@ function Sprite() {
   this.vx = 0;
   this.vy = 0;
   this.SIZE = 15;
-  this.vidas = 3;
   this.imageLib;
   this.pose = 0;
   this.frame = 0;
@@ -64,28 +63,28 @@ function Sprite() {
       row: 8,
       col: 0,
       colMax: 0,
-      time: 16//Alterei o tempo de execução
+      time: 16
     },
     {
       key: "pc",
       row: 19,
       col: 0,
       colMax: 12,
-      time: 16//Alterei o tempo de execução
+      time: 16
     },
     {
       key: "pc",
       row: 18,
       col: 0,
       colMax: 12,
-      time: 16//Alterei o tempo de execução
+      time: 16
     },
     {
       key: "pc",
       row: 17,
       col: 0,
       colMax: 12,
-      time: 16//Alterei o tempo de execução
+      time: 16
     },
     {
       key: "pc",
@@ -122,7 +121,6 @@ function Sprite() {
       colMax: 0,
       time: 8
     },
-
   ]
 }
 
@@ -130,7 +128,7 @@ Sprite.prototype.desenhar = function(ctx) {
   this.desenharPose(ctx);
   if(this.debug) this.desenharLimites(ctx);
 
-}
+};
 
 Sprite.prototype.desenharPose = function(ctx) {
   ctx.fillStyle = "black";
@@ -147,11 +145,7 @@ Sprite.prototype.desenharPose = function(ctx) {
     64,
     this.x - 32, this.y - 53
   );
-  /*
-  ctx.fillStyle = "white";
-  ctx.fillText(Math.floor(this.frame), this.x, this.y);
-  console.log(Math.floor(this.frame));*/
-}
+};
 
 Sprite.prototype.desenharPoseObjetos = function(ctx) {
   ctx.fillStyle = "black";
@@ -168,7 +162,7 @@ Sprite.prototype.desenharPoseObjetos = function(ctx) {
     32,
     this.x - 32, this.y - 53
   );
-}
+};
 
 Sprite.prototype.desenharLimites = function(ctx) {
   ctx.fillStyle = "yellow";
@@ -191,23 +185,24 @@ Sprite.prototype.mover = function(dt) {
 };
 
 Sprite.prototype.moverOnMap = function(map, dt) {
-  this.tiro-=dt;
-  //if(this.tiro <= 0.5) this.pose = 0;
-  if (pc.pose == 10 && pc.tiro<=0.5){
+  this.tiro -= dt;
+
+  if (pc.pose == 10 && pc.tiro <= 0.5){
     pc.pose = 6;
-  }else if (pc.pose == 11 && pc.tiro<=0.5){
+  }else if (pc.pose == 11 && pc.tiro <= 0.5){
     pc.pose = 7;
-  }else if (pc.pose == 8 && pc.tiro<=0.5){
+  }else if (pc.pose == 8 && pc.tiro <= 0.5){
     pc.pose = 4;
-  }else if (pc.pose == 9 && pc.tiro<=0.5){
+  }else if (pc.pose == 9 && pc.tiro <= 0.5){
     pc.pose = 5;
   }
+
   this.frame += this.poses[this.pose].time * dt;
   if (this.frame > this.poses[this.pose].colMax + 1) {
     this.frame = this.poses[this.pose].col;
   }
+
   var pos = map.getIndices(this);
-  //if (map.cells[pos.l][pos.c] != 0) return;
 
   if (this.vx > 0 && map.cells[pos.l][pos.c + 1] != 0) {
     var dist = (pos.c + 1) * map.SIZE - (this.x + this.SIZE / 2);
@@ -239,7 +234,7 @@ Sprite.prototype.animacao = function(dt){
   if (this.frame > this.poses[this.pose].colMax + 1) {
     this.frame = this.poses[this.pose].col;
   }
-}
+};
 
 Sprite.prototype.persegue = function(alvo) {
   var dist = Math.sqrt(Math.pow(alvo.x - this.x, 2) + Math.pow(alvo.y - this.y, 2));
@@ -261,7 +256,7 @@ Sprite.prototype.persegue = function(alvo) {
 };
 
 Sprite.prototype.colidiuCom = function(alvo){
-  if(this.y + (this.SIZE / 2) < alvo.y - (alvo.SIZE / 2)) return false;
+  if(this.y + (this.SIZE / 2) < alvo.y - (alvo.SIZE / 2 + 15)) return false;
   if(this.y - (this.SIZE / 2) > alvo.y + (alvo.SIZE / 2)) return false;
   if(this.x + (this.SIZE / 2) < alvo.x - (alvo.SIZE / 2)) return false;
   if(this.x - (this.SIZE / 2) > alvo.x + (alvo.SIZE / 2)) return false;

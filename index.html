@@ -5,19 +5,14 @@
     <title>Grid</title>
     <link rel="stylesheet" href="estilo.css" />
     <script src="ImageLoader.js"></script>
+    <script src="SoundLoader.js"></script>
     <script src="Map.js"></script>
     <script src="Sprite.js"></script>
     <script src="Game.js"></script>
   </head>
   <body>
-    <h1>Jogo Grid</h1>
-    <h1> Vidas: <output id="Vida"></output> Inimigos: <output id="Inimigo"></output> Nível: <output id="Nivel"></output></h1>
+    <div><h1><output id="Vida"></output><output id="Inimigo"></output><output id="Nivel"></output></h1></div>
     <canvas></canvas>
-    <h3>Objetivo do Jogo:</h3>
-    <p>Elimine todos os inimigos e ao final encoste no bloco amarelo e avance de fase. A cada vez que o personagem sofrer uma colisão com os inimigos ele volta para a posição inicial e se a quantidade de vidas chegar a 0 você perde. Ao término do nível 10 você vence o jogo.</p>
-    <h3>Instruções:</h3>
-    <p>Para mover o personagem utilize as teclas direcionais do teclado.</p>
-    <p>Para atirar utilize a tecla "ESPAÇO" do teclado</p>
     <script>
       init();
     </script>
