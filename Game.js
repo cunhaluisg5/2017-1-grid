@@ -25,7 +25,9 @@ function init() {
   soundLib.load("woman", "mp3/woman.mp3");
   soundLib.load("coins", "mp3/coins.mp3");
   soundLib.load("perdeu", "mp3/perdeu.mp3");
+  soundLib.load("proximo", "mp3/proximo.mp3");
   soundLib.load("venceu", "mp3/venceu.mp3");
+  soundLib.load("ouch", "mp3/ouch.mp3");
 
   imglib.load("pc", "pc.png");
   imglib.load("piso_muro", "Imagens/piso_muro.png");
@@ -127,9 +129,11 @@ function configuraControles() {
           e.preventDefault();
           break;
         case 32:
-          mapa.tiro(pc.x, pc.y, pc.dir);
-          pc.vx = 0;
-          pc.vy = 0;
+          if(aux == 1){
+            mapa.tiro(pc.x, pc.y, pc.dir);
+            pc.vx = 0;
+            pc.vy = 0;
+          }
           e.preventDefault();
           break;
         case 80:

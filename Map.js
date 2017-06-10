@@ -1238,6 +1238,7 @@ Map.prototype.testarColisao = function(alvo){
       alvo.x = 50;
       alvo.y = 90;
       vidas--;
+      soundLib.play("ouch");
     }
   }
 };
@@ -1303,7 +1304,11 @@ Map.prototype.testarFim = function(map){
     contador++;
     this.inc = 0;
     this.enemies.length = 0;
-    soundLib.play("venceu");
+    if(contador >= 11){
+    	soundLib.play("venceu");
+    }else{
+    	soundLib.play("proximo");
+    }
     aux = 4;
     if (contador == 1){
       fases = ([
@@ -1520,7 +1525,7 @@ Map.prototype.testarFim = function(map){
   if(contador == 1 && start == 1){
     var inicio = new Image();
     inicio.src = "Imagens/inicial.png";
-    ctx.drawImage(inicio, 0, 0, 430, 320); 
+    ctx.drawImage(inicio, 0, 0, 430, 320);
   }
 
   if(contador > 10){
