@@ -29,24 +29,24 @@ function init() {
   soundLib.load("venceu", "mp3/venceu.mp3");
   soundLib.load("ouch", "mp3/ouch.mp3");
 
-  imglib.load("pc", "pc.png");
-  imglib.load("piso_muro", "Imagens/piso_muro.png");
-  imglib.load("architecture", "Imagens/architecture.png");
-  imglib.load("terrain", "Imagens/terrain.png");
-  imglib.load("objetos", "Imagens/obj_misk_atlas.png");
-  imglib.load("coins", "Imagens/coins.png");
-  imglib.load("enemie1", "Enemies/enemie1.png");
-  imglib.load("enemie2", "Enemies/enemie2.png");
-  imglib.load("enemie3", "Enemies/enemie3.png");
-  imglib.load("enemie4", "Enemies/enemie4.png");
-  imglib.load("enemie5", "Enemies/enemie5.png");
-  imglib.load("enemie6", "Enemies/enemie6.png");
-  imglib.load("enemie7", "Enemies/enemie7.png");
-  imglib.load("enemie8", "Enemies/enemie8.png");
-  imglib.load("enemie9", "Enemies/enemie9.png");
-  imglib.load("enemie10", "Enemies/enemie10.png");
+  imglib.load("pc", "imagens/pc.png");
+  imglib.load("piso_muro", "imagens/piso_muro.png");
+  imglib.load("architecture", "imagens/architecture.png");
+  imglib.load("terrain", "imagens/terrain.png");
+  imglib.load("objetos", "imagens/obj_misk_atlas.png");
+  imglib.load("coins", "imagens/coins.png");
+  imglib.load("enemie1", "enemies/enemie1.png");
+  imglib.load("enemie2", "enemies/enemie2.png");
+  imglib.load("enemie3", "enemies/enemie3.png");
+  imglib.load("enemie4", "enemies/enemie4.png");
+  imglib.load("enemie5", "enemies/enemie5.png");
+  imglib.load("enemie6", "enemies/enemie6.png");
+  imglib.load("enemie7", "enemies/enemie7.png");
+  imglib.load("enemie8", "enemies/enemie8.png");
+  imglib.load("enemie9", "enemies/enemie9.png");
+  imglib.load("enemie10", "enemies/enemie10.png");
 
-  mapa = new Map(15, 34);
+  mapa = new Map(16, 34);
   mapa.imageLib = imglib;
   pc = new Sprite();
   pc.imageLib = imglib;
@@ -86,6 +86,9 @@ function passo() {
   mapa.info(id);
   antes = agora;
   ctx.restore();
+  if(start != 1 && start != 3 && start != 5){
+    mapa.desenhaTopo();
+  }
 }
 
 function configuraControles() {
@@ -145,9 +148,7 @@ function configuraControles() {
           ctx.fillRect(0, 0, tela.width, tela.height);                    
           ctx.font = "3em fantasy";
           ctx.fillStyle = "darkRed";
-
-          ctx.fillText(txt, 110, 150);
-
+          ctx.fillText(txt, (tela.width / 4), (tela.height / 2));
           cancelAnimationFrame(id);                    
           aux = 2;
         }
@@ -163,6 +164,7 @@ function configuraControles() {
             start = 2;
             mapa.enemies.length = 0;
             fases = ([
+            [  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5],
             [  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1, 16, 10, 36,  1,  1,  1,  1,  1,  1],
             [  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  9,  0,  0,  0,  0,  0,  0,  0, 27, 22, 17, 11, 37, 42, 47,  0,  0,  0,  1],
             [  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1,  1,  0,  0,130,127, 32, 28, 23, 18, 12, 38, 43, 48, 52,134,137,  1],

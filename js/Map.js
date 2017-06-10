@@ -1300,18 +1300,19 @@ Map.prototype.testarFim = function(map){
       }
     }
   }
-  if(this.enemies.length == 0 && pc.x > 839.5 && pc.x < 856.5 && pc.y > 327 && pc.y < 344){
+  if(this.enemies.length == 0 && pc.x > 839.5 && pc.x < 856.5 && pc.y > 359.5 && pc.y < 364.5){
     contador++;
     this.inc = 0;
     this.enemies.length = 0;
     if(contador >= 11){
-    	soundLib.play("venceu");
+      soundLib.play("venceu");
     }else{
-    	soundLib.play("proximo");
+      soundLib.play("proximo");
     }
     aux = 4;
     if (contador == 1){
       fases = ([
+      [  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5],
       [  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1, 16, 10, 36,  1,  1,  1,  1,  1,  1],
       [  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  9,  0,  0,  0,  0,  0,  0,  0, 27, 22, 17, 11, 37, 42, 47,  0,  0,  0,  1],
       [  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1,  1,  0,  0,130,127, 32, 28, 23, 18, 12, 38, 43, 48, 52,134,137,  1],
@@ -1330,6 +1331,7 @@ Map.prototype.testarFim = function(map){
       ])
     } else if (contador == 2){
       fases = ([
+      [  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5],
       [  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1],
       [  1,  0,  0,  0,  0,  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,172,  0,  1],
       [  1,  0,  0,  0,  0,  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  9,  0,  0,  0,  0,  0,  1,  1,  0,  0,  0,  0,  0,  1],
@@ -1348,6 +1350,7 @@ Map.prototype.testarFim = function(map){
       ])
     } else if (contador == 3){
       fases = ([
+      [  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5],
       [  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1],
       [  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,173,174,  0,  0,  1,  0,144,  0,  0,  0,  0,  0,  0,  1],
       [  1,  0,  0,  0,  0,  0,  0,  0,  0,  1,  0,  0,179,  1,  1,  0,  0,  1,  1,  0,175,176,  0,  0,  1,  0,  0,  0,  1,  0,  0,  0,  0,  1],
@@ -1366,6 +1369,7 @@ Map.prototype.testarFim = function(map){
       ])
     } else if (contador == 4){
       fases = ([
+      [  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5],
       [  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1],
       [  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  9,  0,  0,  0,  0,  0,  0,  0,190,191,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1],
       [  1,  0,  0,  0,198,  0,  0,  1,  0,  0,  0,  0,  0,  0,198,  0,  0,  0,192,193,  0,  0,  1,  0,  0,  0,  0,  0,  1,  0,198,  0,  0,  1],
@@ -1384,6 +1388,7 @@ Map.prototype.testarFim = function(map){
       ])
     } else if (contador == 5){
       fases = ([
+      [  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5],
       [  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1],
       [  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  9,  0,  0,  1],
       [  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1,  0,  1,  0,  1,  0,  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1],
@@ -1402,6 +1407,7 @@ Map.prototype.testarFim = function(map){
       ])
     } else if (contador == 6){
       fases = ([
+      [  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5],
       [  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1],
       [  1,  0,  0,  0,  0,  1,  9,  0,  0,  0,  0,  0,  0,209,210,211,215,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1,  1],
       [  1,  0,  0,  1,  0,  0,  1,  0,  0,  0,  0,  0,  0,212,213,214,216,  0,  0,  1,  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1],
@@ -1420,6 +1426,7 @@ Map.prototype.testarFim = function(map){
       ])
     } else if (contador == 7){
       fases = ([
+      [  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5],
       [  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1],
       [  1,  0,  0,  0,  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,219,220,221,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1,  9,  1],
       [  1,  0,  0,  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,222,223,  0,  0,  0,  0,  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1],
@@ -1438,6 +1445,7 @@ Map.prototype.testarFim = function(map){
       ])
     } else if (contador == 8){
       fases = ([
+      [  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5],
       [  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1],
       [  1,  0,  0,  0,  0,  0,  1,  9,  0,  0,  0,  0,  0,  0,144,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  9,  0,  0,  0,  0,  0,  1,144,  1],
       [  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,223,  0,  0,  0,  1,  0,  0,  0,  0,  1,  0,  0,  0,  0,224,223,  0,  1,  0,  1],
@@ -1456,6 +1464,7 @@ Map.prototype.testarFim = function(map){
       ])
     } else if (contador == 9){
       fases = ([
+      [  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5],
       [  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1],
       [  1,  0,  0,  0,  0,  0,  0,  0,  0,  1,  9,  0,  0,  0,225,  0,  0,  0,  0,  0,  1,  1,  0,  0,  9,  0,  0,  0,  0,  0,  0,  0,225,  1],
       [  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,224,  0,  0,  0,  0,  0,  0,  0,225,  0,  0,  0,  0,  0,  0,  1],
@@ -1474,6 +1483,7 @@ Map.prototype.testarFim = function(map){
       ])
     } else if (contador == 10){
       fases = ([
+      [  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5],
       [  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1],
       [  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1,  0,  0,  0,  0,  0,  9,  1,  0,  0,  0,  0,  9,  0,  0,  0,229,  0,  0,  0,  0,  0,230,  1],
       [  1,  0,  0,  0,  0,  0,  0,  1,  9,  1,  1,  0,  0,  0,  0,  0,  1,  0,  0,227,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  9,  1],
@@ -1502,13 +1512,6 @@ Map.prototype.testarFim = function(map){
 };
 
  Map.prototype.info = function(id){
-  
-  var vida = document.getElementById("Vida");
-  vida.innerText = "Vidas: " + vidas;
-  var inimigo = document.getElementById("Inimigo");
-  inimigo.innerText = " Inimigos: " + mapa.enemies.length;
-  var nivel = document.getElementById("Nivel");
-  nivel.innerText = " Nível: " + contador;
 
   if(vidas == 0 && start != 3){    
     mapa.inc = 0;
@@ -1518,13 +1521,13 @@ Map.prototype.testarFim = function(map){
 
   if(vidas == 0){
     var perdeu = new Image();
-    perdeu.src = "Imagens/perdeu.png";
+    perdeu.src = "imagens/telas/perdeu.png";
     ctx.drawImage(perdeu, 0, 0, 430, 320);    
   } 
 
   if(contador == 1 && start == 1){
     var inicio = new Image();
-    inicio.src = "Imagens/inicial.png";
+    inicio.src = "imagens/telas/inicial.png";
     ctx.drawImage(inicio, 0, 0, 430, 320);
   }
 
@@ -1533,15 +1536,34 @@ Map.prototype.testarFim = function(map){
     start = 4;
 
     var ganhou = new Image();
-    ganhou.src = "Imagens/venceu.png";
+    ganhou.src = "imagens/telas/venceu.png";
     ctx.drawImage(ganhou, 0, 0, 430, 320);
     aux = 0;
   }
 
   if(aux == 4 && contador > 0 && contador < 11){
     var proximo = new Image();
-    proximo.src = "Imagens/proximo.png";
+    proximo.src = "imagens/telas/proximo.png";
     ctx.drawImage(proximo, 0, 0, 430, 320);
     start = 5;
   }
+}
+
+Map.prototype.desenhaTopo = function(){
+  var topo1 = new Image();
+  topo1.src = "imagens/topo/vidas.png";
+  ctx.drawImage(topo1, 50, 0, 32, 30);
+  ctx.strokeStyle = 'yellow';
+  ctx.font = "1.5em Arial Black";
+  ctx.fillText(vidas, 90, 27);
+  ctx.strokeText(vidas, 90, 27);
+
+  var topo2 = new Image();
+  topo2.src = "imagens/topo/" + contador + ".png";
+  ctx.drawImage(topo2, 300, 0, 32, 30);
+  ctx.fillText(this.enemies.length, 340, 27);
+  ctx.strokeText(this.enemies.length, 340, 27);
+
+  ctx.fillText("Nível: " + contador, 500, 27);
+  ctx.strokeText("Nível: " + contador, 500, 27);
 }
