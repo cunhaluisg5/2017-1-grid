@@ -9,118 +9,22 @@ function Sprite() {
   this.frame = 0;
   this.tiro = 0;
   this.poses = [
-    {
-      key: "pc",
-      row: 11,
-      col: 0,
-      colMax: 7,
-      time: 8
-    },
-    {
-      key: "pc",
-      row: 10,
-      col: 0,
-      colMax: 7,
-      time: 8
-    },
-    {
-      key: "pc",
-      row: 9,
-      col: 0,
-      colMax: 7,
-      time: 8
-    },
-    {
-      key: "pc",
-      row: 8,
-      col: 0,
-      colMax: 7,
-      time: 8
-    },
-    {
-      key: "pc",
-      row: 11,
-      col: 0,
-      colMax: 0,
-      time: 8
-    },
-    {
-      key: "pc",
-      row: 10,
-      col: 0,
-      colMax: 0,
-      time: 8
-    },
-    {
-      key: "pc",
-      row: 9,
-      col: 0,
-      colMax: 0,
-      time: 8
-    },
-    {
-      key: "pc",
-      row: 8,
-      col: 0,
-      colMax: 0,
-      time: 16
-    },
-    {
-      key: "pc",
-      row: 19,
-      col: 0,
-      colMax: 12,
-      time: 16
-    },
-    {
-      key: "pc",
-      row: 18,
-      col: 0,
-      colMax: 12,
-      time: 16
-    },
-    {
-      key: "pc",
-      row: 17,
-      col: 0,
-      colMax: 12,
-      time: 16
-    },
-    {
-      key: "pc",
-      row: 16,
-      col: 0,
-      colMax: 12,
-      time: 8
-    },
-    {
-      key: "pc",
-      row: 19,
-      col: 0,
-      colMax: 0,
-      time: 8
-    },
-    {
-      key: "pc",
-      row: 18,
-      col: 0,
-      colMax: 0,
-      time: 8
-    },
-    {
-      key: "pc",
-      row: 17,
-      col: 0,
-      colMax: 0,
-      time: 8
-    },
-    {
-      key: "pc",
-      row: 16,
-      col: 0,
-      colMax: 0,
-      time: 8
-    },
+    {key: "pc", row: 11, col: 0, colMax:  7, time:  8},
+    {key: "pc", row: 10, col: 0, colMax:  7, time:  8},
+    {key: "pc", row:  9, col: 0, colMax:  7, time:  8},
+    {key: "pc", row:  8, col: 0, colMax:  7, time:  8},
+    {key: "pc", row: 11, col: 0, colMax:  0, time:  8},
+    {key: "pc", row: 10, col: 0, colMax:  0, time:  8},
+    {key: "pc", row:  9, col: 0, colMax:  0, time:  8},
+    {key: "pc", row:  8, col: 0, colMax:  0, time: 16},
+    {key: "pc", row: 19, col: 0, colMax: 12, time: 16},
+    {key: "pc", row: 18, col: 0, colMax: 12, time: 16},
+    {key: "pc", row: 17, col: 0, colMax: 12, time: 16},
+    {key: "pc", row: 16, col: 0, colMax: 12, time:  8},
+    {key: "pc", row: 19, col: 0, colMax:  0, time:  8},
+    {key: "pc", row: 18, col: 0, colMax:  0, time:  8},
+    {key: "pc", row: 17, col: 0, colMax:  0, time:  8},
+    {key: "pc", row: 16, col: 0, colMax:  0, time:  8},
   ]
 }
 
