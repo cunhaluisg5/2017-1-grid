@@ -1533,12 +1533,12 @@ Map.prototype.testarFim = function(map){
 
   if(contador > 10){
     mapa.enemies.length = 0;    
-    start = 4;
+    start = 1;
 
     var ganhou = new Image();
     ganhou.src = "imagens/telas/venceu.png";
     ctx.drawImage(ganhou, 0, 0, 430, 320);
-    aux = 0;
+    //aux = 0;
   }
 
   if(aux == 4 && contador > 0 && contador < 11){
